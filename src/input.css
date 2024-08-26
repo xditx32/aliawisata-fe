@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .flex::before,
+  .flex::after {
+    display: none !important;
+  }
+
+  img {
+    @apply object-cover;
+  }
+
+  body {
+    @apply relative text-white bg-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply py-3 px-[22px] rounded-[50px] bg-primary text-white font-semibold text-sm md:text-base text-center inline-flex justify-center items-center gap-3;
+  }
+  .btn-secondary {
+    @apply py-3 px-[22px] rounded-[50px] bg-secondary text-white font-semibold text-sm md:text-base text-center inline-flex justify-center items-center gap-3;
+  }
+}
+
+@layer utilities {
+}

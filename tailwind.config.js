@@ -16,8 +16,8 @@ module.exports = {
     extend: {
       colors: {
         'dark-indigo': '#0D0322',
-        primary: '#27164B',
-        secondary: '#82D0DF',
+        primary: '#003e88',
+        secondary: '#01a83e',
         'butter-yellow': '#F7FF82',
         'lavender-pink': '#DF82CB',
         'persian-pink': '#DF82CA',

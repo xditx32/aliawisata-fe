@@ -7,6 +7,9 @@
   <link href="./output.css" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 
 <body>
@@ -21,7 +24,7 @@
       ]
     });
   </script>
-  <div x-data="slideshow()"
+  <!-- <div x-data="slideshow()"
     class="w-full h-screen relative z-20 -mt-32 px-12 flex items-center justify-center bg-green-900">
     <div class="h-full w-full absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60"></div>
     <div class="relative z-10 text-center px-12">
@@ -51,12 +54,35 @@
         </svg>
       </button>
     </div>
+  </div> -->
+  <!-- carousel slider -->
+  <div id="thumbnail-slider" class=""
+    data-flickity='{ "cellAlign": "left", "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
+    <div class="h-screen overflow-hidden">
+      <div class="absolute inset-0">
+        <img alt="title" class="w-full h-full max-w-auto"
+          src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80">
+        <div></div>
+      </div>
+      <div class="relative z-10 flex flex-col justify-center items-center">
+        <h1
+          class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-3xl lg:text-4xl xl:text-5xl font-black leading-relaxed lg:leading-relaxed xl:leading-normal text-white font-display">
+          Umroh penuh makna dengan
+          Aliawisata tour travel</h1>
+        <div
+          class="max-w-xs md:max-w-sm lg:max-w-md mx-auto mt-8 text-white text-sm lg:text-base lg:leading-loose tracking-wide">
+          <p>“Ibadah umrah ke ibadah umrah berikutnya adalah penggugur (dosa) di antara keduanya, dan haji yang mabrur
+            tiada
+            balasan (bagi pelakunya) melainkan surga” (HR al-Bukhari dan Muslim)</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Section About -->
   <section class="container relative max-w-screen-xl py-10 bg-primary">
     <div class="flex flex-wrap justify-between items-center w-full gap-8 align-middle">
-      <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 items-center">
         <div class="lg:col-span-2 w-full relative overflow-hidden">
           <div class="flex flex-col gap-[2px]">
             <!-- <div class="w-full max-w-[400px] flex flex-col gap-[2px]"> -->
@@ -84,8 +110,19 @@
         </div>
         <div class="lg:col-span-2 w-full relative overflow-hidden">
           <!-- <img class="max-w-[584px] max-h-[400px] w-full h-full" -->
-          <img class="w-full h-full" src="./assets/images/product/ilustrasi-umrah-backpacker-ke-mekkah.jpg" alt=""
-            srcset="">
+          <!-- <img class="w-full h-full" src="./assets/images/product/ilustrasi-umrah-backpacker-ke-mekkah.jpg" alt=""
+            srcset=""> -->
+          <!-- <div class="plyr__video-embed " id="player">
+            <iframe class="aspect-video rounded-[20px] bg-[#D9D9D9]"
+              src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+              allowfullscreen allowtransparency allow="autoplay"></iframe>
+          </div> -->
+          <!-- <div id="player" class="w-full h-full aspect-video rounded-[20px] bg-[#D9D9D9]" data-plyr-provider="youtube"
+            data-plyr-embed-id="bTqVqk7FSmY"></div> -->
+          <iframe class="w-full aspect-video rounded-[20px] bg-[#D9D9D9]"
+            src="https://www.youtube.com/embed/glkiTD8Lqpg" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -114,7 +151,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -127,7 +164,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -144,7 +181,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -181,7 +218,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -194,7 +231,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -211,7 +248,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -248,7 +285,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -261,7 +298,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -278,7 +315,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -315,7 +352,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-xl md:text-2xl">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -328,7 +365,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -345,7 +382,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -463,7 +500,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -476,7 +513,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -493,7 +530,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -530,7 +567,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -543,7 +580,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -560,7 +597,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -597,7 +634,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -610,7 +647,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -627,7 +664,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -664,7 +701,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Priode</h3>
+                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-1">
@@ -677,7 +714,7 @@
               <div class="flex flex-col gap-y-4">
                 <div class="flex items-center gap-4">
                   <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Hotel</h3>
+                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
                 </div>
                 <div>
                   <div class="flex flex-row items-center gap-2">
@@ -694,7 +731,7 @@
               <div class="flex flex-col gap-y-6">
                 <div class="flex items-center gap-4">
                   <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-[16px] md:text-[18px]">Maskapai</h3>
+                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
                   <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
@@ -769,6 +806,29 @@
         Dibawah ini adalah dokumentasi foto-foto keberangkantan umroh Alia Wisata bersama dengan para jamaah.
       </h3>
     </div>
+    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <a href="./assets/images/gallery/Bahrah-Tour-2.png" data-lg-size="1600-2400">
+        <img class="h-[300px] max-w-full rounded-lg" alt="img1" src="./assets/images/gallery/Bahrah-Tour-2.png" />
+      </a>
+      <a href="./assets/images/gallery/Bahrah-Tour-3.png" data-lg-size="1600-2400">
+        <img class="h-[300px] max-w-full rounded-lg" alt="img1" src="./assets/images/gallery/Bahrah-Tour-3.png" />
+      </a>
+      <a href="./assets/images/gallery/Bahrah-Tour-4-1.png" data-lg-size="1600-2400">
+        <img class="h-[300px] max-w-full rounded-lg" alt="img1" src="./assets/images/gallery/Bahrah-Tour-4-1.png" />
+      </a>
+      <a href="./assets/images/gallery/cropped-banner-keberangkatan-scaled-1.png" data-lg-size="1600-2400">
+        <img class="h-[300px] max-w-full rounded-lg" alt="img1"
+          src="./assets/images/gallery/cropped-banner-keberangkatan-scaled-1.png" />
+      </a>
+      <a href="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" data-lg-size="1600-2400">
+        <img class="h-[300px] max-w-full rounded-lg" alt="img1" src="./assets/images/gallery/Kolase-photo-Alia-1.png" />
+      </a>
+      <!-- <a href="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" data-lg-size="1600-2400">
+        <img class="h-ato max-w-full rounded-lg" alt="img1" src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" />
+      </a> -->
+
+    </div>
+
   </section>
 
   <!-- Section Testimonial -->
@@ -827,7 +887,15 @@
 
   </section>
 
-  <footer class="bg-secondary relative max-w-screen-xl mx-auto">
+  <!-- Section Map -->
+  <section class="relative w-full h-96 pt-10">
+    <iframe class="absolute top-0 left-0 w-full h-full"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12080.73732861526!2d-74.0059418!3d40.7127847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMDA2JzEwLjAiTiA3NMKwMjUnMzcuNyJX!5e0!3m2!1sen!2sus!4v1648482801994!5m2!1sen!2sus"
+      frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe>
+  </section>
+
+  <footer class="bg-secondary relative mx-auto">
     <div class="container py-5">
       <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-7">
         <div class="lg:col-span-4 col-span-12">
@@ -912,6 +980,9 @@
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer="defer"></script>
@@ -936,6 +1007,30 @@
       prevNextButtons: true,
       autoPlay: true,
     });
+
+    // lightGallery(document.getElementById('#lightgallery'), {
+    //   plugins: [lgZoom, lgThumbnail],
+    //   //licenseKey: 'your_license_key',
+    //   speed: 500,
+    //   // ... other settings
+    // });
+
+    // const container = document.getElementById("#lightgallery");
+    // lightGallery(container, {
+    //   speed: 500,
+    //   plugins: []
+    // });
+
+
+    lightGallery(document.getElementById("lightgallery"), {
+      thumbnail: true,
+      // animateThumb: false,
+      // zoomFromOriginal: false,
+      // allowMediaOverlap: true,
+      // toggleThumb: true,
+    });
+
+    const player = new Plyr(document.getElementById('player'));
 
     // $carousel = $('#galleryCarousel')
     // let flickityPrevButton = $('#galleryCarousel .flickity-prev-next-button.previous')

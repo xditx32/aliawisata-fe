@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Section Hero -->
+  <script>
+    const slideshow = () => ({
+      current: 0,
+      images: [
+        'https://images.unsplash.com/photo-1602769490455-36cf9734dbcb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D &auto=format&fit=crop&w=1949&q=80',
+        'https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80',
+        'https://images.unsplash.com/photo-1599058917727-824293170100?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80',
+      ]
+    });
+  </script>
+  <div x-data="slideshow()"
+    class="w-full h-screen relative z-20 -mt-32 px-12 flex items-center justify-center bg-green-900">
+    <div class="h-full w-full absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60"></div>
+    <div class="relative z-10 text-center px-12">
+      <h1
+        class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-3xl lg:text-4xl xl:text-5xl font-black leading-relaxed lg:leading-relaxed xl:leading-normal text-white font-display">
+        Umroh penuh makna dengan
+        Aliawisata tour travel</h1>
+      <div
+        class="max-w-xs md:max-w-sm lg:max-w-md mx-auto mt-8 text-white text-sm lg:text-base lg:leading-loose tracking-wide">
+        <p>“Ibadah umrah ke ibadah umrah berikutnya adalah penggugur (dosa) di antara keduanya, dan haji yang mabrur
+          tiada
+          balasan (bagi pelakunya) melainkan surga” (HR al-Bukhari dan Muslim)</p>
+      </div>
+    </div>
+    <img x-bind:src="images[current]" class="absolute top-0 left-0 w-full h-full object-cover opacity-90">
+    <div class="absolute z-20 top-1/2 left-0 w-full flex items-center justify-between px-6 md:px-12">
+      <button x-on:click="current = current > 0 ? current - 1 : images.length - 1" class="hover:opacity-50">
+        <svg class="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+      </button>
+      <button x-on:click="current = current < images.length - 1 ? current + 1 : 0" class="hover:opacity-50">
+        <svg class="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Section About -->
+  <section class="container relative max-w-screen-xl py-10 bg-primary">
+    <div class="flex flex-wrap justify-between items-center w-full gap-8 align-middle">
+      <div class="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 gap-8">
+        <div class="lg:col-span-2 w-full relative overflow-hidden">
+          <div class="flex flex-col gap-[2px]">
+            <!-- <div class="w-full max-w-[400px] flex flex-col gap-[2px]"> -->
+            <h3 class="text-[24px] md:text-[30px]">Selamat datang</h3>
+            <h2 class="text-[36px] md:text-[40px] font-bold">Alia Wisata</h2>
+            <p class="text-justify">Berdiri sejak tahun 2000, Alia Wisata terus berkembang memberikan pelayanan kepada
+              Jamaah Umroh & Haji Khusus. Alia
+              Wisata juga memberikan layanan pariwisata baik Dalam maupun Luar Negeri, baik di bidang Airlines
+              Ticketing,
+              Tours, Hotel
+              Voucher dan MICE (Meeting, Incentive, Conference & Exhibition).<br><br>
+
+              Alia Wisata memberikan layanan yang profesional dengan infrastruktur yang ada, didukung oleh tenaga ahli
+              yang
+              siap
+              melayani pelanggan dengan didasari kejujuran, dedikasi dan loyalitas tinggi serta profesional dalam
+              memberikan
+              pelayanan.<br><br>
+
+              Sebagai travel umroh haji terpercaya Alia Wisata terdaftar sebagai penyelenggara perjalanan ibadah umrah
+              (PPIU) dengan
+              SK NOMOR 832 TAHUN 2019 dan dapat di lihat pada web Sisko Patuh Kemenag melalui link berikut ini</p>
+          </div>
+        </div>
+        <div class="lg:col-span-2 w-full relative overflow-hidden">
+          <!-- <img class="max-w-[584px] max-h-[400px] w-full h-full" -->
+          <img class="w-full h-full" src="./assets/images/product/ilustrasi-umrah-backpacker-ke-mekkah.jpg" alt=""
+            srcset="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Select Best Package Umrah -->
+  <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
+    <div class="flex flex-col justify-between items-center w-full gap-0 mb-[50px]">
+      <h3 class="text-[24px] md:text-[30px] text-primary">Umroh Musim 1445 H</h3>
+      <h2 class="text-[36px] md:text-[40px] font-bold text-secondary">Paket Umroh Unggulan</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
+      <!-- card 1 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[18px] md:text-[20px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-between items-center">
+      <a class="block btn-primary" href="http://">Paket Umroh Unggulan Lainnya</a>
+    </div>
+  </section>
+
+  <!-- Section Package Umrah -->
+  <section class="container relative max-w-screen-xl py-10">
+    <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
+      <h2 class="text-[36px] md:text-[40px] font-bold text-white">Paket Umroh Unggulan</h2>
+      <h3 class="text-[18px] md:text-[20px] text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
+        pilih dari paket
+        reguler dengan biaya yang lebih hemat hingga paket VIP
+        untuk mendapatkan pelayanan terbaik. Semoga kita dimudahkan untuk beribadah umroh di Tanah Suci.</h3>
+    </div>
+    <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
+      <!-- card 1 -->
+      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+        <div class="absolute inset-0">
+          <img class="h-full w-full object-cover object-right md:object-center"
+            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+          <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full">
+          <h3 class="text-[18px] md:text-[20px] font-bold">UMROH REGULER</h2>
+            <h3>mulai dari</h3>
+            <h3>Rp 29.9000.000</h3>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+        <div class="absolute inset-0">
+          <img class="h-full w-full object-cover object-right md:object-center"
+            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+          <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full">
+          <h3 class="text-[18px] md:text-[20px] font-bold">UMROH VIP</h3>
+          <h3>mulai dari</h3>
+          <h3>Rp 29.9000.000</h3>
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+        <div class="absolute inset-0">
+          <img class="h-full w-full object-cover object-right md:object-center"
+            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+          <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full">
+          <h3 class="text-[18px] md:text-[20px] font-bold">sdadasd</h3>
+          <h3>mulai dari</h3>
+          <h3>Rp 29.9000.000</h3>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+        <div class="absolute inset-0">
+          <img class="h-full w-full object-cover object-right md:object-center"
+            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+          <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full">
+          <h3 class="text-[18px] md:text-[20px] font-bold">sdadasd</h3>
+          <p>sdadasd</p>
+          <p>sdadasd</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Section Select New Package Umrah -->
+  <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
+    <div class="flex flex-col justify-between items-center w-full gap-0 mb-[50px]">
+      <!-- <h3 class="text-[24px] md:text-[30px] text-primary">Umroh Musim 1445 H</h3> -->
+      <h2 class="text-[36px] md:text-[40px] font-bold text-secondary">Paket Umroh Terbaru</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
+      <!-- card 1 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[14px] md:text-[16px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
+        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+          alt="tickety-assets">
+        <div class="p-5 w-full bg-primary flex flex-col h-full">
+          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
+          <div class="max-w-[290px]">
+            <div class="flex flex-col gap-y-4 text-white">
+              <div class="text-base font-semibold text-center">
+                UMROH VIP HEMAT 12D NOVEMBER
+              </div>
+              <!-- priode -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Priode</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-1">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Okt 2023</p>
+                  </div>
+                </div>
+              </div>
+              <!-- hotel -->
+              <div class="flex flex-col gap-y-4">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Hotel</h3>
+                </div>
+                <div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                  <div class="flex flex-row items-center gap-2">
+                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                    <p class="text-[14px] md:text-[16px]">Mekkah : Pullman Zamzam</p>
+                  </div>
+                </div>
+              </div>
+              <!-- maskapai -->
+              <div class="flex flex-col gap-y-6">
+                <div class="flex items-center gap-4">
+                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                  <h3 class="text-[16px] md:text-[18px]">Maskapai</h3>
+                </div>
+                <div class="flex flex-row gap-2 ">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold text-secondary text-center">
+                Rp. 39.500.000,00
+              </h3>
+              <div class="mt-auto">
+                <a href="/public/pages/details.html" class="block btn-secondary">
+                  Detail Jadwal
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-col justify-between items-center">
+      <a class="block btn-primary" href="http://">Paket Umroh Lainnya</a>
+    </div>
+  </section>
+
+  <!-- Section Our Services -->
+  <section class="container relative max-w-screen-xl py-10">
+    <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
+      <h3 class="text-[24px] md:text-[30px] text-white">Layanan Kami</h3>
+      <h2 class="text-[36px] md:text-[40px] font-bold text-secondary">Kenapa Harus Kami</h2>
+    </div>
+
+
+    <!-- <div class="grid md:grid-cols-12 grid-cols-1 gap-7">
+      <div class="col-span-6">
+        <img class="w-full lg:max-w-[536px]" src="./assets/images/product/ilustrasi-umrah-backpacker-ke-mekkah.jpg"
+          alt="" srcset="">
+      </div>
+      <div class="col-span-6">
+        <div class="max-w-[268px] w-full" 268px="">
+          <div class="flex flex-col lg:flex-row items-center">
+            <div class="flex flex-row gap-[30px]">
+              <ion-icon name="call-outline"></ion-icon>
+              <div class="">
+                <h5>Berijin Resmi</h5>
+                <p>Alia Wisata adalah biro perjalanan haji dan umroh berijin resmi Izin Umroh No. U. 257 Tahun 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center">
+            <div class="flex flex-col gap-[30px]">
+              <ion-icon name="call-outline"></ion-icon>
+              <div class="">
+                <h5>Berijin Resmi</h5>
+                <p>Alia Wisata adalah biro perjalanan haji dan umroh berijin resmi Izin Umroh No. U. 257 Tahun 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </section>
+
+  <!-- Section Galery -->
+  <section class="container relative max-w-screen-xl py-10">
+    <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
+      <h2 class="text-[36px] md:text-[40px] font-bold text-white">Galei Foto</h2>
+      <h3 class="text-[18px] md:text-[20px] text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
+        Dibawah ini adalah dokumentasi foto-foto keberangkantan umroh Alia Wisata bersama dengan para jamaah.
+      </h3>
+    </div>
+  </section>
+
+  <!-- Section Testimonial -->
+  <section>
+    sdakjakdjkasj
+  </section>
+
+  <!-- Section Testimonial -->
+  <section>
+    sdakjakdjkasj
+  </section>
+
+  <footer class="bg-secondary relative max-w-screen-xl mx-auto">
+    <div class="container py-5">
+      <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-7">
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex flex-wrap flex-col gap-y-4">
+            <img class="h-20 bg-white w-1/2" src="./assets/images/logo-alia-wisata.png" alt="" srcset="">
+            <p class="max-w-[640px] text-justify">
+              Alia Wisata, Travel Umroh & Haji terpercaya di Indonesia dengan izin resmi Kementerian Agama. Ibadah
+              terasa mudah karena
+              tidak lagi pusing untuk mencari travel umroh dan temukan paket umroh yang diinginkan, banyaknya pilihan
+              paket umroh.
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-span-4 md:col-span-4 col-span-12">
+          <h5 class="tracking-wide font-semibold pb-4">Hubungi Kami</h5>
+          <ul class="list-none space-y-2">
+            <li class="flex flex-row gap-4 items-center">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="http://">info@aliawisata.com</a>
+            </li>
+            <li class="flex flex-row gap-4 items-center">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="http://">021-86612366</a>
+            </li>
+            <li class="flex flex-row gap-4 items-center">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <a href="http://">0816-145-8888</a>
+            </li>
+            <li class="flex flex-row gap-4 items-center">
+              <ion-icon name="pin-outline"></ion-icon>
+              <a class="text-sm" href="http://">
+                Puri Sentra Niaga Jalan Inspeksi Saluran Kalimalang blok E no.73 Kelurahan, Cipinang
+                Melayu Kecamatan Makassar,
+                RT.1/RW.13, Cipinang Melayu, Jakarta Timur, RT.1/RW.13, Cipinang Melayu, Kec. Makasar, DKI Jakarta,
+                Daerah Khusus
+                Ibukota Jakarta 13430</a>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="lg:col-span-4 md:col-span-4 col-span-12">
+          <h5 class="tracking-wide font-semibold">Hubungi Kami</h5>
+          <ul class="list-none space-y-2">
+            <li>
+              <a href="http://">a</a>
+            </li>
+            <li>
+              <a href="http://">a</a>
+            </li>
+            <li>
+              <a href="http://">a</a>
+            </li>
+            <li>
+              <a href="http://">a</a>
+            </li>
+        </div>
+        <!-- <div class="lg:col-span-3 md:col-span-4 col-span-12">
+          <h5>sasas</h5>
+          <div class="my-3">
+            <label for=""> write your email</label>
+            <input
+              class="mt-3 w-full py-2 px-3 h-10 bg-white rounded outline-none border-gray-300 focus:border-[#000] focus"
+              type="email" name="" id="">
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+    <div class="border-t border-slate-700 bg-primary">
+      <div class="md:text-left text-center container mx-auto py-3">
+        <p class="mb-0">
+          &copy;
+          <script> document.write(new Date().getFullYear());</script>
+          Alia Wisata
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer="defer"></script>
+</body>
+
+</html>

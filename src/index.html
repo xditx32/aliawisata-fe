@@ -12,7 +12,86 @@
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 
-<body>
+<body class="scroll-smooth">
+
+  <!-- <nav class="sticky top-0 z-30 bg-transparent backdrop-blur-lg"> -->
+  <!-- <nav class="fixed top-0 z-10 w-full bg-white left-0 right-0 mx-auto rounded-md">
+    <div class="container relative max-w-screen-xl">
+      <div class="flex justify-between items-center">
+
+        <a href="http://">
+          <img class="w-1/2 order-1" src="./assets/images/logo-alia-wisata.png" alt="">
+        </a>
+
+        <a href="http://">
+          <img class="w-1/2 order-1" src="./assets/images/logo-alia-wisata.png" alt="">
+        </a>
+        <div class="order-2">
+          <ul class="flex gap-10 text-primary">
+            <li>
+              <a class="text-sm md:text-base" href="http://">Beranda</a>
+            </li>
+            <li>
+              <a class="text-sm md:text-base" href="http://">Tentang Kami</a>
+            </li>
+            <li>
+              <a class="text-sm md:text-base" href="http://">Galeri</a>
+            </li>
+            <li>
+              <a class="text-sm md:text-base" href="http://">Kontak Kami</a>
+            </li>
+          </ul>
+        </div>
+        <div class="order-3">
+          <button>asds</button>
+        </div>
+      </div>
+
+    </div>
+  </nav> -->
+  <!-- Navbar -->
+  <nav class="fixed top-0 z-10 w-full bg-white left-0 right-0 mx-auto rounded-md">
+    <div class="container relative max-w-screen-xl">
+      <div class="flex flex-col justify-between w-full lg:flex-row lg:items-center">
+        <!-- Logo & Toggler Button here -->
+        <div class="flex items-center justify-between">
+          <!-- LOGO -->
+          <a href="./index.html">
+            <img class="w-1/2" src="./assets/images/logo-alia-wisata.png" alt="tickety-assets" />
+          </a>
+          <!-- RESPONSIVE NAVBAR BUTTON TOGGLER -->
+          <div class="block lg:hidden">
+            <button class="p-1 outline-none text-primary" id="navbarToggler" data-target="#navigation">
+              <svg class="text-dark w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Nav Menu -->
+        <div class="hidden w-full lg:block" id="navigation">
+          <div class="flex flex-col items-baseline gap-4 lg:py-2 py-6 lg:justify-between lg:flex-row lg:items-center">
+            <div
+              class="flex flex-col w-full ml-auto lg:w-auto gap-4 lg:gap-[50px] lg:items-center lg:flex-row text-primary">
+              <a class="nav-link-item text-sm md:text-base font-bold" href="#!">Beranda</a>
+              <a class="nav-link-item text-sm md:text-base font-bold" href="#!">Tentang Kami</a>
+              <a class="nav-link-item text-sm md:text-base font-bold" href="#!">Jadwal Paket</a>
+              <a class="nav-link-item text-sm md:text-base font-bold" href="#!">Galeri</a>
+              <a class="nav-link-item text-sm md:text-base font-bold" href="#!">Kontak Kami</a>
+            </div>
+            <div class="flex flex-col w-full ml-auto lg:w-auto lg:gap-12 lg:items-center lg:flex-row">
+              <a href="#!" class="btn-primary uppercase">
+                Whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <!-- Section Hero -->
   <script>
     const slideshow = () => ({
@@ -55,23 +134,45 @@
       </button>
     </div>
   </div> -->
-  <!-- carousel slider -->
-  <div id="thumbnail-slider" class=""
-    data-flickity='{ "cellAlign": "left", "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
-    <div class="h-screen overflow-hidden">
+
+  <div id="slider">
+    <div class="h-screen w-full overflow-hidden">
       <div class="absolute inset-0">
-        <img alt="title" class="w-full h-full max-w-auto"
-          src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80">
-        <div></div>
+        <img alt="title" class="h-full w-full object-cover object-right md:object-center"
+          src="./assets/images/slider/14699_b40d8fa1d0c902abca5fb30b711c5a05.jpg">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
       </div>
-      <div class="relative z-10 flex flex-col justify-center items-center">
+      <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+        <h2 class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-xl md:text-2xl md:leading-normal text-white">
+          Umroh penuh makna dengan</h2>
         <h1
-          class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-3xl lg:text-4xl xl:text-5xl font-black leading-relaxed lg:leading-relaxed xl:leading-normal text-white font-display">
-          Umroh penuh makna dengan
-          Aliawisata tour travel</h1>
+          class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-4xl md:text-5xl font-black md:leading-normal text-white">
+          Alia Wisata</h1>
         <div
-          class="max-w-xs md:max-w-sm lg:max-w-md mx-auto mt-8 text-white text-sm lg:text-base lg:leading-loose tracking-wide">
-          <p>“Ibadah umrah ke ibadah umrah berikutnya adalah penggugur (dosa) di antara keduanya, dan haji yang mabrur
+          class="max-w-xs md:max-w-md lg:max-w-2xl mx-auto text-white text-base md:text-lg md:leading-normal tracking-wide">
+          <p class="text-base md:text-lg">“Ibadah umrah ke ibadah umrah berikutnya adalah penggugur (dosa) di antara
+            keduanya, dan haji yang mabrur
+            tiada
+            balasan (bagi pelakunya) melainkan surga” (HR al-Bukhari dan Muslim)</p>
+        </div>
+      </div>
+    </div>
+    <div class="h-screen w-full overflow-hidden">
+      <div class="absolute inset-0">
+        <img alt="title" class="h-full w-full object-cover object-right md:object-center"
+          src="./assets/images/slider/masjid-nabawi-1.jpg">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+      </div>
+      <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+        <h2 class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-xl md:text-2xl md:leading-normal text-white">
+          Umroh penuh makna dengan</h2>
+        <h1
+          class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-4xl md:text-5xl font-black md:leading-normal text-white">
+          Alia Wisata</h1>
+        <div
+          class="max-w-xs md:max-w-md lg:max-w-2xl mx-auto text-white text-base md:text-lg md:leading-normal tracking-wide">
+          <p class="text-base md:text-lg">“Ibadah umrah ke ibadah umrah berikutnya adalah penggugur (dosa) di antara
+            keduanya, dan haji yang mabrur
             tiada
             balasan (bagi pelakunya) melainkan surga” (HR al-Bukhari dan Muslim)</p>
         </div>
@@ -111,7 +212,7 @@
         <div class="lg:col-span-2 w-full relative overflow-hidden">
           <!-- <img class="max-w-[584px] max-h-[400px] w-full h-full" -->
           <!-- <img class="w-full h-full" src="./assets/images/product/ilustrasi-umrah-backpacker-ke-mekkah.jpg" alt=""
-            srcset=""> -->
+          > -->
           <!-- <div class="plyr__video-embed " id="player">
             <iframe class="aspect-video rounded-[20px] bg-[#D9D9D9]"
               src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
@@ -134,18 +235,25 @@
       <h3 class="text-xl md:text-2xl font-semibold text-primary">Umroh Musim 1445 H</h3>
       <h2 class="text-2xl md:text-4xl font-bold text-secondary">Paket Umroh Unggulan</h2>
     </div>
+    <!-- Card Product Group -->
     <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
       <!-- card 1 -->
       <div
         class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
           alt="tickety-assets">
         <div class="p-5 w-full bg-primary flex flex-col h-full">
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Sakinah
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -184,12 +292,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -211,8 +319,14 @@
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Mawadah
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -251,12 +365,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -278,8 +392,14 @@
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Mawdah 2
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -318,12 +438,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -339,14 +459,20 @@
       <!-- card 4 -->
       <div
         class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
           alt="tickety-assets">
         <div class="p-5 w-full bg-primary flex flex-col h-full">
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Sakinah 2
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -385,12 +511,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -404,7 +530,7 @@
         </div>
       </div>
     </div>
-
+    <!-- End Card Product Group -->
     <div class="flex flex-col justify-between items-center">
       <a class="block btn-primary" href="http://">Paket Umroh Unggulan Lainnya</a>
     </div>
@@ -413,7 +539,7 @@
   <!-- Section Package Umrah -->
   <section class="container relative max-w-screen-xl py-10">
     <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
-      <h2 class="text-2xl md:text-4xl font-bold text-white">Paket Umroh Unggulan</h2>
+      <h2 class="text-2xl md:text-4xl font-bold text-white">Paket Umroh</h2>
       <h3 class="text-xl md:text-2xl text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
         pilih dari paket
         reguler dengan biaya yang lebih hemat hingga paket VIP
@@ -421,55 +547,59 @@
     </div>
     <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
       <!-- card 1 -->
-      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
         <div class="absolute inset-0">
           <img class="h-full w-full object-cover object-right md:object-center"
-            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
           <div class="absolute inset-0 bg-black opacity-60"></div>
         </div>
-        <div class="relative z-10 flex flex-col justify-center items-center h-full">
-          <h3 class="text-xl md:text-2xl font-bold">UMROH REGULER</h2>
-            <h3>mulai dari</h3>
-            <h3>Rp 29.9000.000</h3>
+        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
+          <h3 class="text-xl md:text-2xl font-bold">UMROH REGULER</h3>
+          <h4 class="text-lg md:text-xl">mulai dari</h4>
+          <h3 class="text-xl md:text-2xl font-bold">Rp 29.9000.000</h3>
         </div>
       </div>
       <!-- card 2 -->
-      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
         <div class="absolute inset-0">
           <img class="h-full w-full object-cover object-right md:object-center"
-            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
           <div class="absolute inset-0 bg-black opacity-60"></div>
         </div>
-        <div class="relative z-10 flex flex-col justify-center items-center h-full">
+        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
           <h3 class="text-xl md:text-2xl font-bold">UMROH VIP</h3>
-          <h3>mulai dari</h3>
-          <h3>Rp 29.9000.000</h3>
+          <h4 class="text-lg md:text-xl">mulai dari</h4>
+          <h3 class="text-xl md:text-2xl font-bold">Rp 29.9000.000</h3>
         </div>
       </div>
       <!-- card 3 -->
-      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
         <div class="absolute inset-0">
           <img class="h-full w-full object-cover object-right md:object-center"
-            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
           <div class="absolute inset-0 bg-black opacity-60"></div>
         </div>
-        <div class="relative z-10 flex flex-col justify-center items-center h-full">
+        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
           <h3 class="text-xl md:text-2xl font-bold">sdadasd</h3>
-          <h3>mulai dari</h3>
-          <h3>Rp 29.9000.000</h3>
+          <h4 class="text-lg md:text-x">mulai dari</h4>
+          <h3 class="text-xl md:text-2xl font-bold">Rp 29.9000.000</h3>
         </div>
       </div>
       <!-- card 4 -->
-      <div class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[250px]">
+      <div
+        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
         <div class="absolute inset-0">
           <img class="h-full w-full object-cover object-right md:object-center"
-            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
           <div class="absolute inset-0 bg-black opacity-60"></div>
         </div>
-        <div class="relative z-10 flex flex-col justify-center items-center h-full">
+        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
           <h3 class="text-xl md:text-2xl font-bold">sdadasd</h3>
-          <p>sdadasd</p>
-          <p>sdadasd</p>
+          <h4 class="text-lg md:text-xl">sdadasd</h4>
+          <h3 class="text-xl md:text-2xl font-bold">sdadasd</h3>
         </div>
       </div>
 
@@ -483,18 +613,25 @@
       <!-- <h3 class="text-xl md:text-2xl text-primary">Umroh Musim 1445 H</h3> -->
       <h2 class="text-2xl md:text-4xl font-bold text-secondary">Paket Umroh Terbaru</h2>
     </div>
+    <!-- Card Product Group -->
     <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
       <!-- card 1 -->
       <div
         class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
           alt="tickety-assets">
         <div class="p-5 w-full bg-primary flex flex-col h-full">
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Sakinah
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -533,12 +670,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -560,8 +697,14 @@
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Mawadah
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -600,12 +743,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -627,8 +770,14 @@
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Mawdah 2
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -667,12 +816,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -688,14 +837,20 @@
       <!-- card 4 -->
       <div
         class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
+        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
           alt="tickety-assets">
         <div class="p-5 w-full bg-primary flex flex-col h-full">
           <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
           <div class="max-w-[290px]">
             <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-semibold text-center">
-                UMROH VIP HEMAT 12D NOVEMBER
+              <div class="text-base font-bold text-center uppercase">
+                Paket Sakinah 2
+              </div>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
               <!-- priode -->
               <div class="flex flex-col gap-y-4">
@@ -734,12 +889,12 @@
                   <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
                 </div>
                 <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="" srcset="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
                 </div>
               </div>
 
-              <h3 class="text-xl font-semibold text-secondary text-center">
+              <h3 class="text-xl md:text-2xl font-bold text-secondary text-center">
                 Rp. 39.500.000,00
               </h3>
               <div class="mt-auto">
@@ -752,49 +907,94 @@
           <!-- </div> -->
         </div>
       </div>
-
     </div>
+    <!-- End Card Product Group -->
     <div class="flex flex-col justify-between items-center">
       <a class="block btn-primary" href="http://">Paket Umroh Lainnya</a>
     </div>
   </section>
 
-  <!-- Section Our Services -->
+  <!-- Section Our Brosur -->
   <section class="container relative max-w-screen-xl py-10">
     <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
-      <h3 class="text-xl md:text-2xl font-semibold text-white">Layanan Kami</h3>
-      <h2 class="text-2xl md:text-4xl font-bold text-secondary">Kenapa Harus Kami</h2>
+      <!-- <h3 class="text-xl md:text-2xl font-semibold text-white">Brosur Terbaru Update</h3> -->
+      <h2 class="text-2xl md:text-4xl font-bold text-secondary">Brosur Terbaru Update</h2>
     </div>
 
+    <div id="new-browsur">
+      <a href="http://">
+        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/02.jpg" alt="">
+      </a>
+      <a href="http://">
+        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/01.jpg" alt="">
+      </a>
+      <a href="http://">
+        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/04-1.jpg" alt="">
+      </a>
+      <a href="http://">
+        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/03.jpg" alt="">
+      </a>
+    </div>
 
-    <!-- <div class="grid md:grid-cols-12 grid-cols-1 gap-7">
-      <div class="col-span-6">
-        <img class="w-full lg:max-w-[536px]" src="./assets/images/product/ilustrasi-umrah-backpacker-ke-mekkah.jpg"
-          alt="" srcset="">
-      </div>
-      <div class="col-span-6">
-        <div class="max-w-[268px] w-full" 268px="">
-          <div class="flex flex-col lg:flex-row items-center">
-            <div class="flex flex-row gap-[30px]">
-              <ion-icon name="call-outline"></ion-icon>
-              <div class="">
-                <h5>Berijin Resmi</h5>
-                <p>Alia Wisata adalah biro perjalanan haji dan umroh berijin resmi Izin Umroh No. U. 257 Tahun 2020</p>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col lg:flex-row items-center">
-            <div class="flex flex-col gap-[30px]">
-              <ion-icon name="call-outline"></ion-icon>
-              <div class="">
-                <h5>Berijin Resmi</h5>
-                <p>Alia Wisata adalah biro perjalanan haji dan umroh berijin resmi Izin Umroh No. U. 257 Tahun 2020</p>
-              </div>
-            </div>
+  </section>
+  <img src="./assets/images/wavy-line-1.svg" class="absolute -z-10 md:top-[100rem] w-full" alt="tickety-assets">
+  <!-- Section Our Services -->
+  <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
+    <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
+      <h3 class="text-xl md:text-2xl font-semibold text-white">Layanan Kami</h3>
+      <h2 class="text-2xl md:text-4xl font-bold text-primary">Kenapa Harus Kami</h2>
+    </div>
+    <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 lg:gap-[120px] items-center">
+      <img class="w-full md:max-w-[536px]"
+        src="./assets/images/service/cropped-1200px-Garuda_Indonesia_Boeing_737-800_PK-GMM_HKG_2012-7-18-780x405.png"
+        alt="">
+      <div class="max-w-[420px] w-full">
+        <header>
+          <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Extra Layanan</h3>
+          <p class="text-sm md:text-base text-primary mb-1">Anda adalah prioritas kami!</p>
+        </header>
+        <!-- Service Item -->
+        <div class="flex items-center gap-6">
+          <img class="w-[60px]" src="./assets/images/service/customer-service.png" alt="">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Support</h3>
+            <p class="text-sm md:text-base text-primary mb-1">Guna memberikan pelayanan terbaik, Alia Wisata bekerja
+              sama
+              dengan mitra usaha
+              terpercaya melalui
+              jaringan luas kami,
+              baik maskapai penerbangan, hotel, maupun pemerintah</p>
           </div>
         </div>
+        <div class="flex items-center gap-6">
+          <img class="w-[60px]" src="./assets/images/service/achievement.png" alt="">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Quality</h3>
+            <p class="text-sm md:text-base text-primary mb-1">Produk jasa Alia Wisata dirancang dan dikemas oleh
+              tenaga
+              kerja
+              yang profesional dan
+              berpengalaman,
+              sehingga terjaga
+              kualitas dan layanannya</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <img class="w-[60px]" src="./assets/images/service/response.png" alt="">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Responsive</h3>
+            <p class="text-sm md:text-base text-primary mb-1">Alia Wisata sebagai travel umrah haji berkomitmen pada
+              standar
+              kerja tinggi, untuk
+              memberikan pelayanan
+              terbaik dan
+              amanah kepada setiap pelanggan maupun mitra usahanya</p>
+          </div>
+        </div>
+
       </div>
-    </div> -->
+    </div>
+
 
   </section>
 
@@ -839,6 +1039,145 @@
         Dibawah ini adalah dokumentasi foto-foto keberangkantan umroh Alia Wisata bersama dengan para jamaah.
       </h3> -->
     </div>
+    <div id="testimonial">
+      <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-4">
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+            <div class="flex flex-row gap-4 items-center text-primary">
+              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+              <div class="flex flex-col">
+                <h4 class="text-base md:text-lg font-bold">Tri Prastia</h4>
+                <p>Jamaah</p>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-primary">alhamdilullah perjalan umroh berjalan lancar dan dipandung
+              dengan baik oleh Alia
+              Wisata, semoga bisa kembali lagi
+              umroh bersama Alia Wisata
+            </p>
+            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+            <div class="flex flex-row gap-4 items-center text-primary">
+              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+              <div class="flex flex-col">
+                <h4 class="text-base md:text-lg font-bold">Yuni Asri</h4>
+                <p>Jamaah</p>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-primary">Puji Syukur kepada Allah akhirnya saya bisa melaksanakan ibadah
+              umroh, dan
+              terimakasih buat Alia Wisata yang telah
+              memberikan pelayanan terbaik hingga pulang ke tanah air
+            </p>
+            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+            <div class="flex flex-row gap-4 items-center text-primary">
+              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+              <div class="flex flex-col">
+                <h4 class="text-base md:text-lg font-bold">Indah</h4>
+                <p>Jamaah</p>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-primary">Pelayanan bagus, keberangkatan tepat waktu, hotelnya keren,
+              makanannya juga keren, insyaalah jika umroh lagi akan
+              bersama Alia Wisata lagi
+            </p>
+            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-4">
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+            <div class="flex flex-row gap-4 items-center text-primary">
+              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+              <div class="flex flex-col">
+                <h4 class="text-base md:text-lg font-bold">Tri Prastia</h4>
+                <p>Jamaah</p>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-primary">alhamdilullah perjalan umroh berjalan lancar dan dipandung
+              dengan baik oleh Alia
+              Wisata, semoga bisa kembali lagi
+              umroh bersama Alia Wisata
+            </p>
+            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+            <div class="flex flex-row gap-4 items-center text-primary">
+              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+              <div class="flex flex-col">
+                <h4 class="text-base md:text-lg font-bold">Yuni Asri</h4>
+                <p>Jamaah</p>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-primary">Puji Syukur kepada Allah akhirnya saya bisa melaksanakan ibadah
+              umroh, dan
+              terimakasih buat Alia Wisata yang telah
+              memberikan pelayanan terbaik hingga pulang ke tanah air
+            </p>
+            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+            <div class="flex flex-row gap-4 items-center text-primary">
+              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+              <div class="flex flex-col">
+                <h4 class="text-base md:text-lg font-bold">Indah</h4>
+                <p>Jamaah</p>
+              </div>
+            </div>
+            <p class="text-sm md:text-base text-primary">Pelayanan bagus, keberangkatan tepat waktu, hotelnya keren,
+              makanannya juga keren, insyaalah jika umroh lagi akan
+              bersama Alia Wisata lagi
+            </p>
+            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </section>
 
   <!-- Section Mitra -->
@@ -850,20 +1189,20 @@
         </h3> -->
     </div>
     <div id="mitraCarousel">
-      <img src="./assets/images/mitra/logo-citilink-abt.jpg" class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
+      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-citilink-abt.jpg"
         alt="tickety-assets">
-      <img src="./assets/images/mitra/logo-elaf-hotel-abt.jpg" class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
+      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-elaf-hotel-abt.jpg"
         alt="tickety-assets">
-      <img src="./assets/images/mitra/logo-emirates-abt.jpg" class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
+      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-emirates-abt.jpg"
         alt="tickety-assets">
-      <img src="./assets/images/mitra/logo-etihad-abt.jpg" class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
+      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-etihad-abt.jpg"
         alt="tickety-assets">
-      <img src="./assets/images/mitra/logo-garuda-indonesia-abt.jpg" class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
+      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-garuda-indonesia-abt.jpg"
         alt="tickety-assets">
-      <img src="./assets/images/mitra/logo-hotel-fajr-badie-icon.jpg" class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
+      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-hotel-fajr-badie-icon.jpg"
         alt="tickety-assets">
-      <img src="./assets/images/mitra/logo-hotel-le-meridien-mekah.jpg"
-        class="w-[150px] h-[120px] rounded-2xl mr-[30px]" alt="tickety-assets">
+      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
+        src="./assets/images/mitra/logo-hotel-le-meridien-mekah.jpg" alt="tickety-assets">
     </div>
     <!-- <div id="galleryCarousel">
       <img src="./assets/images/logo-alia-wisata.png" class="w-[433px] h-[310px] rounded-2xl mr-[30px]"
@@ -890,18 +1229,19 @@
   <!-- Section Map -->
   <section class="relative w-full h-96 pt-10">
     <iframe class="absolute top-0 left-0 w-full h-full"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12080.73732861526!2d-74.0059418!3d40.7127847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMDA2JzEwLjAiTiA3NMKwMjUnMzcuNyJX!5e0!3m2!1sen!2sus!4v1648482801994!5m2!1sen!2sus"
-      frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-    </iframe>
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1983.0592767550183!2d106.910004!3d-6.248105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f32ce6fef20f%3A0x89dca65a133bb62!2sAlia%20Wisata!5e0!3m2!1sid!2sid!4v1725100268556!5m2!1sid!2sid"
+      style="border:0;" allowfullscreen="" frameborder="0" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
-  <footer class="bg-secondary relative mx-auto">
+  <!-- Footer -->
+  <footer class="bg-white relative mx-auto">
     <div class="container py-5">
       <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-7">
         <div class="lg:col-span-4 col-span-12">
           <div class="flex flex-wrap flex-col gap-y-4">
-            <img class="h-20 bg-white w-1/2" src="./assets/images/logo-alia-wisata.png" alt="" srcset="">
-            <p class="text-sm md:text-base max-w-[640px]">
+            <img class="lg:h-20 w-1/2" src="./assets/images/logo-alia-wisata.png" alt="">
+            <p class="text-sm md:text-base max-w-[640px] text-primary">
               Alia Wisata, Travel Umroh & Haji terpercaya di Indonesia dengan izin resmi Kementerian Agama. Ibadah
               terasa mudah karena
               tidak lagi pusing untuk mencari travel umroh dan temukan paket umroh yang diinginkan, banyaknya pilihan
@@ -910,48 +1250,46 @@
           </div>
         </div>
         <div class="lg:col-span-4 md:col-span-4 col-span-12">
-          <h5 class="tracking-wide text-lg md:text-xl font-bold pb-4">Hubungi Kami</h5>
+          <h5 class="tracking-wide text-lg md:text-xl font-bold pb-4 text-primary">Hubungi Kami</h5>
           <ul class="list-none space-y-2">
             <li class="flex flex-row gap-4 items-center">
-              <ion-icon name="call-outline"></ion-icon>
-              <a class="text-sm md:text-base" href="http://">info@aliawisata.com</a>
+              <ion-icon class="text-secondary text-xl" name="mail-outline"></ion-icon>
+              <a class="text-sm md:text-base text-primary" href="http://">info@aliawisata.com</a>
             </li>
             <li class="flex flex-row gap-4 items-center">
-              <ion-icon name="call-outline"></ion-icon>
-              <a class="text-sm md:text-base" href="http://">021-86612366</a>
+              <ion-icon class="text-secondary text-xl" name="call-outline"></ion-icon>
+              <a class="text-sm md:text-base text-primary" href="http://">021-86612366</a>
             </li>
             <li class="flex flex-row gap-4 items-center">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-              <a class="text-sm md:text-base" href="http://">0816-145-8888</a>
+              <ion-icon class="text-secondary text-xl" name="logo-whatsapp"></ion-icon>
+              <a class="text-sm md:text-base text-primary" href="http://">0816-145-8888</a>
             </li>
             <li class="flex flex-row gap-4 items-center">
-              <ion-icon name="pin-outline"></ion-icon>
-              <a class="text-sm md:text-base" href="http://">
+              <ion-icon class="text-secondary text-[110px] lg:text-[130px]" name="navigate-outline"></ion-icon>
+              <a class="text-sm md:text-base text-primary text-justify leading-2" href="http://">
+                <span class="font-bold">Kantor Pusat</span><br>
                 Puri Sentra Niaga Jalan Inspeksi Saluran Kalimalang blok E no.73 Kelurahan, Cipinang
-                Melayu Kecamatan Makassar,
-                RT.1/RW.13, Cipinang Melayu, Jakarta Timur, RT.1/RW.13, Cipinang Melayu, Kec. Makasar, DKI Jakarta,
-                Daerah Khusus
-                Ibukota Jakarta 13430</a>
+                Melayu Kecamatan Makassar, RT.1/RW.13, Cipinang Melayu, Jakarta Timur, RT.1/RW.13, Cipinang Melayu,
+                Kec.
+                Makasar, DKI Jakarta, Daerah Khusus bukota Jakarta 13430</a>
             </li>
 
           </ul>
 
         </div>
         <div class="lg:col-span-4 md:col-span-4 col-span-12">
-          <h5 class="tracking-wide text-lg md:text-xl font-bold pb-4">Sosial Media</h5>
+          <h5 class="tracking-wide text-lg md:text-xl font-bold pb-4 text-primary">Sosial Media</h5>
           <ul class="list-none space-y-2">
             <li class="flex flex-row gap-4 items-center">
-              <a class="text-lg md:text-xl" href="http://">@aliawisatatravel</a>
+              <ion-icon class="text-secondary text-xl" name="logo-instagram"></ion-icon>
+              <a class="text-lg md:text-xl text-primary font-bold" href="http://">@aliawisatatravel</a>
             </li>
-            <!-- <li>
-              <a href="http://">a</a>
-            </li>
-            <li>
-              <a href="http://">a</a>
-            </li>
-            <li>
-              <a href="http://">a</a>
-            </li> -->
+          </ul>
+          <h5 class="tracking-wide text-lg md:text-xl font-bold py-4 text-primary">
+            Kebijakan & Privasi</h5>
+          <a href="https://umrahcerdas.kemenag.go.id/home/detail/23" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/images/siskopatuh.webp" alt="">
+          </a>
         </div>
         <!-- <div class="lg:col-span-3 md:col-span-4 col-span-12">
           <h5>sasas</h5>
@@ -966,22 +1304,20 @@
       </div>
     </div>
     <div class="border-t border-slate-700 bg-primary">
-      <div class="md:text-left text-center container mx-auto py-3">
+      <div class="text-center container mx-auto py-3">
         <p class="mb-0">
-          All Rights Reserved. Copyright
-          Alia Wisata 2020 -
+          ©
           <script> document.write(new Date().getFullYear());</script>
+          Alia Wisata. All rights reserved. Made with ❤️ in Indonesia.
         </p>
       </div>
     </div>
   </footer>
 
-
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -996,17 +1332,68 @@
     //   contain: true
     // });
 
+    $(() => {
+      $('#navbarToggler').on('click', function (e) {
+        let navigationMenu = $(this).attr('data-target')
+        $(navigationMenu).toggleClass('hidden')
+      })
+    })
+
+
     // element argument can be a selector string
     //   for an individual element
     var flkty = new Flickity('#mitraCarousel', {
       cellAlign: 'center',
-      contain: true,
-      pageDots: false,
       imagesLoaded: true,
-      groupCells: false,
+      contain: true,
       prevNextButtons: true,
       autoPlay: true,
+      wrapAround: true,
+      draggable: true,
+      adaptiveHeight: true,
+      pageDots: false,
+      groupCells: false,
     });
+
+    var flkty = new Flickity('#slider', {
+      cellAlign: 'left',
+      imagesLoaded: true,
+      contain: true,
+      prevNextButtons: true,
+      autoPlay: true,
+      wrapAround: true,
+      draggable: true,
+      adaptiveHeight: true,
+      pageDots: false,
+      groupCells: false,
+    });
+
+    var flkty = new Flickity('#new-browsur', {
+      cellAlign: 'left',
+      imagesLoaded: true,
+      contain: true,
+      prevNextButtons: true,
+      autoPlay: true,
+      wrapAround: true,
+      draggable: true,
+      adaptiveHeight: true,
+      pageDots: false,
+      groupCells: false,
+    });
+
+    var flkty = new Flickity('#testimonial', {
+      cellAlign: 'left',
+      imagesLoaded: true,
+      contain: true,
+      prevNextButtons: true,
+      autoPlay: 5000,
+      wrapAround: true,
+      draggable: true,
+      adaptiveHeight: true,
+      pageDots: false,
+      groupCells: false,
+    });
+
 
     // lightGallery(document.getElementById('#lightgallery'), {
     //   plugins: [lgZoom, lgThumbnail],

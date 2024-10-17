@@ -84,6 +84,8 @@
   </div>
 
 
+
+
   <!-- Section detail produt -->
   <!-- <section class="container relative max-w-screen-xl py-10 bg-primary">
     <div class="flex flex-wrap justify-between items-center w-full gap-8 align-middle">
@@ -213,7 +215,38 @@
   </section> -->
 
   <section class="container relative max-w-screen-xl py-10 bg-primary">
+    <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 gap-4">
+
+      <div class="lg:col-span-4 bg-secondary p-7">
+        <div class="inline-flex gap-[6px] items-center bg-secondary rounded-full px-4 py-[6px] w-max">
+          <img src="./assets/images/ic-champion-cup.svg" alt="tickety-assets">
+          <p class="text-sm font-semibold text-white">
+            Popular
+          </p>
+        </div>
+        <div>
+          <h5 class="text-[24px] md:text-[38px] font-bold text-primary">
+            What <span class="text-butter-yellow">This</span> <br>
+            <span class="text-butter-yellow">Event</span> About?
+          </h5>
+          <p class="text-primary text-lg leading-8 max-w-[640px] mt-4 mb-[30px]">
+            {!! $product->about !!}
+          </p>
+        </div>
+        <div id="slider-banner-product">
+          <a href="http://">
+            <img class="w-[500px] h-[400px] rounded-lg mr-[30px]" src="./assets/images/gallery/Bahrah-Tour-2.webp"
+              alt="">
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-2 bg-white">
+        assas
+      </div>
+    </div>
+
     <div class="flex flex-wrap justify-between w-full gap-6 align-middle">
+
       <!-- side left -->
       <div class="flex flex-col gap-4 p-7 lg:max-w-[630px] md:max-w-[480px] max-w-full bg-white rounded-lg">
         <div class="inline-flex gap-[6px] items-center bg-secondary rounded-full px-4 py-[6px] w-max">

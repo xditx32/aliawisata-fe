@@ -6,10 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-zoom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-share.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body class="scroll-smooth">
@@ -137,60 +144,41 @@
     </div>
   </div> -->
 
-  <div id="slider">
-    <div class="h-screen w-full overflow-hidden">
-      <div class="absolute inset-0">
-        <img alt="title" class="h-full w-full object-cover object-right md:object-center"
-          src="./assets/images/slider/14699_b40d8fa1d0c902abca5fb30b711c5a05.jpg">
-        <div class="absolute inset-0 bg-black opacity-60"></div>
-      </div>
-      <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
-        <h2 class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-xl md:text-2xl md:leading-normal text-white">
-          Umroh penuh makna dengan</h2>
-        <h1
-          class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-4xl md:text-5xl font-black md:leading-normal text-white">
-          Alia Wisata</h1>
-        <div
-          class="max-w-xs md:max-w-md lg:max-w-2xl mx-auto text-white text-base md:text-lg md:leading-normal tracking-wide">
-          <p class="text-base md:text-lg">“Ibadah umrah ke ibadah umrah berikutnya adalah penggugur (dosa) di antara
-            keduanya, dan haji yang mabrur
-            tiada
-            balasan (bagi pelakunya) melainkan surga” (HR al-Bukhari dan Muslim)</p>
+  <!-- Section Hero -->
+  <div id="swiper_banner" class="swiper w-full">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="h-screen md:h-[750px] w-full overflow-hidden">
+          <div class="absolute inset-0">
+            <img alt="title" class="h-full w-full object-cover object-right md:object-center"
+              src="{!! Storage::url($slider->photo) !!}">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+          </div>
+          <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+            <h1 class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-xl md:text-2xl md:leading-normal text-white">
+              .
+            </h1>
+            <div class="max-w-md md:max-w-xl lg:max-w-2xl mx-auto text-white md:leading-normal tracking-wide">
+              <p class="text-3xl md:text-4xl font-bold"> . </p>
+            </div>
+            <h2 class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-base md:text-lg  md:leading-normal text-white">
+              .
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="h-screen w-full overflow-hidden">
-      <div class="absolute inset-0">
-        <img alt="title" class="h-full w-full object-cover object-right md:object-center"
-          src="./assets/images/slider/masjid-nabawi-1.jpg">
-        <div class="absolute inset-0 bg-black opacity-60"></div>
-      </div>
-      <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
-        <h2 class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-xl md:text-2xl md:leading-normal text-white">
-          Umroh penuh makna dengan</h2>
-        <h1
-          class="md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto text-4xl md:text-5xl font-black md:leading-normal text-white">
-          Alia Wisata</h1>
-        <div
-          class="max-w-xs md:max-w-md lg:max-w-2xl mx-auto text-white text-base md:text-lg md:leading-normal tracking-wide">
-          <p class="text-base md:text-lg">“Ibadah umrah ke ibadah umrah berikutnya adalah penggugur (dosa) di antara
-            keduanya, dan haji yang mabrur
-            tiada
-            balasan (bagi pelakunya) melainkan surga” (HR al-Bukhari dan Muslim)</p>
-        </div>
-      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
 
   <!-- Section About -->
-  <section class="container relative max-w-screen-xl py-10 bg-primary">
+  <section id="about" class="container relative max-w-screen-xl py-10 bg-primary">
     <div class="flex flex-wrap justify-between items-center w-full gap-8 align-middle">
       <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 items-center">
         <div class="lg:col-span-2 w-full relative overflow-hidden">
-          <div class="flex flex-col gap-[2px]">
-            <!-- <div class="w-full max-w-[400px] flex flex-col gap-[2px]"> -->
-            <h3 class="text-xl md:text-2xl">Selamat datang</h3>
-            <h2 class="text-2xl md:text-4xl font-bold">Alia Wisata</h2>
+          <div class="flex flex-col gap-[2px] py-4">
+            <h2 class="text-2xl md:text-3xl font-bold py-2">Alia Wisata, Travel Umroh Terbaik dan Terpercaya.</h2>
             <p class="text-sm md:text-base text-justify">Berdiri sejak tahun 2000, Alia Wisata terus berkembang
               memberikan pelayanan kepada
               Jamaah Umroh & Haji Khusus. Alia
@@ -210,18 +198,45 @@
               (PPIU) dengan
               SK NOMOR 832 TAHUN 2019 dan dapat di lihat pada web Sisko Patuh Kemenag melalui link berikut ini</p>
           </div>
+          <div class="mt-auto py-4 w-2/4">
+            <a href="#" class="block btn-secondary">
+              <div class="flex flex-row gap-2 items-center justify-center align-center wid">
+                Tentang Kami
+                <ion-icon name="chevron-forward-outline" class="text-white"></ion-icon>
+              </div>
+            </a>
+          </div>
+          <div class="grid grid-cols-6 gap-4">
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/amphuri-logo.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/bank-bsi-logo.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/iata-logo.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/iqra-logo.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/kan-logo.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/logo-bnsp.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/logo-kemenag.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/siskopatuh-logo.png') !!}" alt="" srcset="">
+            </div>
+            <div class="bg-white rounded-md">
+              <img src="{!! asset('/assets/frontend/images/logo_lembaga/tims-logo.png') !!}" alt="" srcset="">
+            </div>
+          </div>
         </div>
         <div class="lg:col-span-2 w-full relative overflow-hidden">
-          <!-- <img class="max-w-[584px] max-h-[400px] w-full h-full" -->
-          <!-- <img class="w-full h-full" src="./assets/images/product/ilustrasi-umrah-backpacker-ke-mekkah.jpg" alt=""
-          > -->
-          <!-- <div class="plyr__video-embed " id="player">
-            <iframe class="aspect-video rounded-[20px] bg-[#D9D9D9]"
-              src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-              allowfullscreen allowtransparency allow="autoplay"></iframe>
-          </div> -->
-          <!-- <div id="player" class="w-full h-full aspect-video rounded-[20px] bg-[#D9D9D9]" data-plyr-provider="youtube"
-            data-plyr-embed-id="bTqVqk7FSmY"></div> -->
           <iframe class="w-full aspect-video rounded-[20px] bg-[#D9D9D9]"
             src="https://www.youtube.com/embed/glkiTD8Lqpg" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -232,383 +247,282 @@
   </section>
 
   <!-- Section Select Best Package Umrah -->
-  <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
-    <div class="flex flex-col justify-between items-center w-full gap-0 mb-[50px]">
-      <h3 class="text-xl md:text-2xl font-semibold text-primary">Umroh Musim 1445 H</h3>
-      <h2 class="text-2xl md:text-4xl font-bold text-secondary">Paket Umroh Unggulan</h2>
+  <section id="packet" class="container relative max-w-screen-xl py-10 bg-white rounded-md">
+    <div class="flex flex-col justify-between w-full gap-0 mb-[50px]">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary">Program Best Seller.</h2>
+      <p class="text-base md:text-lg text-secondary">Kami memiliki paket-paket umroh yang dapat anda
+        Tangal keberangkatan terdekat program umroh Alia Wisata.</p>
     </div>
-    <!-- Card Product Group -->
-    <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
-      <!-- card 1 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <p
-          class="px-[14px] py-2 rounded-xl bg-butter-yellow text-dark-indigo font-semibold text-sm absolute top-5 right-5">
-          Popular
-        </p>
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Sakinah
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="http://127.0.0.1:5500/src/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
+    <div id="swiper_product" class="swiper w-full pb-10">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide w-[300px] rounded-2xl overflow-hidden relative bg-primary">
+          <a href="{{ route('product.details', [$category->slug, $product->slug]) }}">
+            <img src="{!! Storage::url( $product->photo ) !!}" class="w-full h-full" alt="{!! $product->name!!}">
+            <div class="flex flex-row justify-between items-center align-center px-4 py-2">
+              <div class="flex flex-row w-full max-w-24 order-1">
+                <img class="w-full bg-white rounded-xl" src="{!! Storage::url( $ProductAirline->airline->icon ) !!}"
+                  alt="">
+              </div>
+              <div class="flex flex-col gap-2 order-2">
+                <p class="text-sm md:text-xs">Harga Mulai</p>
+                <h3 class="text-3xl md:text-2xl font-bold text-secondary">
+                  {!! $product->price_start_from !!} Juta
+                </h3>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        @elseif($product->display === 'IMAGE_TEXT')
+        <div class="swiper-slide w-[300px] rounded-2xl overflow-hidden relative bg-primary">
+          {{-- <div
+            class="swiper-slide w-[300px] h-[250px] rounded-2xl overflow-hidden relative min-h-[760px] bg-primary"> --}}
+            {{-- <a data-src="{!! Storage::url( $product->photo ) !!}"> --}}
+              <img src="{!! Storage::url( $product->photo ) !!}" class="w-full h-full" alt="{!! $product->name!!}">
+              {{-- </a> --}}
+            <p class="px-[14px] py-2 rounded-xl bg-primary text-white font-semibold text-sm absolute top-5 right-5">
+              Promo
+            </p>
+            {{-- <div class="px-[14px] py-2 absolute top-[140px] right-5">
+              <a id="category" href="" title="Brosur">
+                <ion-icon name="help-circle-outline" class="text-3xl animate-bounce"
+                  src="{!!  Storage::url($product->brochure) !!}">
+                </ion-icon>
+              </a>
+            </div> --}}
+            <div class="w-full bg-primary flex flex-col h-full">
+              <div class="max-w-full pb-4">
+                <div class="flex flex-col gap-y-2 text-white">
+                  <div class="text-lg md:text-2xl font-bold text-center uppercase pt-2">
+                    {!! $product->title !!}
+                  </div>
+                  {{-- <div class="text-base md:text-sm font-bold text-center uppercase">
+                    {!! $product->name!!}
+                  </div> --}}
+                  <div class="text-base md:text-sm font-bold text-center bg-white rounded-xl text-primary mx-4 py-2">
+                    ({!! $product->start_priode->format('d-m-Y')!!} s.d. {!! $product->end_priode->format('d-m-Y')!!})
+                  </div>
+                  <!-- priode -->
+                  <div class="flex flex-col px-4 py-1">
+                    {{-- <div>
+                      <div class="flex flex-row items-center gap-1">
+                        <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                        <p class="text-sm md:text-base">{{ $product->start_priode->format('d-M-Y') }}</p>
+                      </div>
+                    </div> --}}
+                    <div class="flex flex-row align-center items-center justify-between">
+                      <div class="flex flex-col gap-y-2">
+                        <div class="flex flex-wrap gap-2">
+                          @forelse ($product->ProductTags as $ProductTag)
+                          <div class="bg-secondary px-2 py-1 rounded-md block">
+                            <p class="text-sm md:text-xs">#{!! $ProductTag->name !!}</p>
+                          </div>
+                          @empty
+
+                          @endforelse
+                        </div>
+                      </div>
+                      {{-- <div class="flex items-end justify-end">
+                        <img class="w-[50%]" src="{!! Storage::url( $product->category->icon) !!}" alt="" srcset="">
+                      </div> --}}
+                    </div>
+                  </div>
+                  <!-- hotel -->
+                  <div class="flex flex-col gap-y-4 px-4 py-2 border">
+                    {{-- <div class="flex items-center gap-4">
+                      <p class="text-sm md:text-xs px-[14px] py-1 rounded-lg bg-primary border">Hotel</p>
+                    </div> --}}
+                    <div class="flex items-center justify-between">
+                      <h3 class="text-base md:text-lg font-bold text-secondary">Hotel</h3>
+                      <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                    </div>
+                    @forelse ($product->ProductHoteles as $ProductHotel)
+                    <div class="flex flex-row gap-2 items-center align-center justify-between">
+                      {{-- <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon> --}}
+                      <p class="text-sm md:text-sm"> {!! $ProductHotel->hotel->name !!} </p>
+                      <div class="flex flex-row">
+                        @if ($ProductHotel->hotel->rating == 1)
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 2)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 3)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 4)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 5)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @endif
+                      </div>
+                    </div>
+                    @empty
+                    <p class="text-sm md:text-base text-primary"> Data Belum Tersedia </p>
+                    @endforelse
+                  </div>
+                  <!-- maskapai -->
+                  <div class="flex flex-row justify-between items-center align-center px-4 py-2">
+                    <div class="flex flex-row w-full max-w-24 order-1">
+                      @forelse ($product->ProductAirlines as $ProductAirline)
+                      <img class="w-full bg-white rounded-xl"
+                        src="{!! Storage::url( $ProductAirline->airline->icon ) !!}" alt="">
+                      @empty
+                      <p class="text-sm md:text-base text-primary">
+                        Data Belum Tersedia
+                      </p>
+                      @endforelse
+                    </div>
+                    <div class="flex flex-col gap-2 order-2">
+                      <p class="text-sm md:text-xs">Harga Mulai</p>
+                      <h3 class="text-3xl md:text-2xl font-bold text-secondary">
+                        {!! $product->price_start_from !!} Juta
+                      </h3>
+                    </div>
+
+                  </div>
+                  {{-- <div class="grid grid-cols-2 p-4 items-center">
+                    <div class="flex items-center gap-4">
+                      <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                      <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
+                    </div>
+                    <div class="">
+                      <div class="flex flex-col gap-2">
+                        @forelse ($product->ProductAirlines as $ProductAirline)
+                        <img class="w-[80%] bg-white rounded-xl"
+                          src="{!! Storage::url( $ProductAirline->airline->icon ) !!}" alt="">
+                        @empty
+                        <p class="text-sm md:text-base text-primary">
+                          Data Belum Tersedia
+                        </p>
+                        @endforelse
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <div class="flex flex-col gap-2 items-end">
+                        <p class="text-sm md:text-xs">Harga Mulai</p>
+                        <h3 class="text-3xl md:text-2xl font-bold text-secondary">
+                          {!! $product->price_start_from !!} Juta
+                        </h3>
+                      </div>
+                    </div>
+                  </div> --}}
+                  <div>
+                    @if ($product->seat_available == 1)
+                    <div class="mt-auto px-4 py-1">
+                      <a href="{{ route('product.details', [$category->slug, $product->slug]) }}"
+                        class="block btn-orange">
+                        <div class="flex flex-row gap-2 items-center justify-center align-center">
+                          <ion-icon name="alert-circle-outline" class="text-white"></ion-icon>
+                          Terbatas
+                        </div>
+                      </a>
+                    </div>
+                    @elseif($product->seat_available >= 1)
+                    <div class="mt-auto px-4 py-1">
+                      <a href="{{ route('product.details', [$category->slug, $product->slug]) }}"
+                        class="block btn-secondary">
+                        <div class="flex flex-row gap-2 items-center justify-center align-center">
+                          <ion-icon name="checkmark-circle" class="text-white"></ion-icon>
+                          {!! $product->seat_available !!}
+                          Tersisa
+                        </div>
+                      </a>
+                    </div>
+                    @else
+                    <div class="mt-auto px-4 py-1">
+                      <a href="#" class="block btn-red">
+                        <div class="flex flex-row gap-2 items-center justify-center align-center">
+                          <ion-icon name="close-circle-outline" class="text-white"></ion-icon>
+                          Full Booked
+                        </div>
+                      </a>
+                    </div>
+                    @endif
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <!-- </div> -->
-        </div>
-      </div>
-      <!-- card 2 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Mawadah
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="/public/pages/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- </div> -->
-        </div>
-      </div>
-      <!-- card 3 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Mawdah 2
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
+          @else
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="/public/pages/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- </div> -->
-        </div>
-      </div>
-      <!-- card 4 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Sakinah 2
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
+          @endif
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="/public/pages/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- </div> -->
+          @endforeach
+
         </div>
       </div>
-    </div>
-    <!-- End Card Product Group -->
-    <div class="flex flex-col justify-between items-center">
-      <a class="block btn-primary" href="http://">Paket Umroh Unggulan Lainnya</a>
-    </div>
+      <div class="flex flex-col justify-between items-center">
+        <a class="block btn-primary" href="{!! route('category', $category->slug) !!}">Paket Umroh Unggulan Lainnya</a>
+      </div>
+      @endif
+
+      @empty
+      <p class="text-sm md:text-base text-primary text-center"> Data Belum Tersedia </p>
+      @endforelse
+
   </section>
+
+  {{-- <img src="{!! asset('/assets/frontend/images/wavy-line-1.svg') !!}" class="absolute -z-10 md:top-[120rem] w-full"
+    alt="tickety-assets"> --}}
 
   <!-- Section Package Umrah -->
   <section class="container relative max-w-screen-xl py-10">
     <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
-      <h2 class="text-2xl md:text-4xl font-bold text-white">Paket Umroh</h2>
-      <h3 class="text-xl md:text-2xl text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
+      <h2 class="text-2xl md:text-3xl font-bold text-white">Paket Categori</h2>
+      <p class="text-base md:text-lg text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
         pilih dari paket
         reguler dengan biaya yang lebih hemat hingga paket VIP
-        untuk mendapatkan pelayanan terbaik. Semoga kita dimudahkan untuk beribadah umroh di Tanah Suci.</h3>
+        untuk mendapatkan pelayanan terbaik. Semoga kita dimudahkan untuk beribadah umroh di Tanah Suci.</p>
     </div>
-    <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
-      <!-- card 1 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
-        <div class="absolute inset-0">
-          <img class="h-full w-full object-cover object-right md:object-center"
-            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
-          <div class="absolute inset-0 bg-black opacity-60"></div>
-        </div>
-        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
-          <h3 class="text-xl md:text-2xl font-bold">UMROH REGULER</h3>
-          <h4 class="text-lg md:text-xl">mulai dari</h4>
-          <h3 class="text-xl md:text-2xl font-bold">Rp 29.9000.000</h3>
-        </div>
-      </div>
-      <!-- card 2 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
-        <div class="absolute inset-0">
-          <img class="h-full w-full object-cover object-right md:object-center"
-            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
-          <div class="absolute inset-0 bg-black opacity-60"></div>
-        </div>
-        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
-          <h3 class="text-xl md:text-2xl font-bold">UMROH VIP</h3>
-          <h4 class="text-lg md:text-xl">mulai dari</h4>
-          <h3 class="text-xl md:text-2xl font-bold">Rp 29.9000.000</h3>
-        </div>
-      </div>
-      <!-- card 3 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
-        <div class="absolute inset-0">
-          <img class="h-full w-full object-cover object-right md:object-center"
-            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
-          <div class="absolute inset-0 bg-black opacity-60"></div>
-        </div>
-        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
-          <h3 class="text-xl md:text-2xl font-bold">sdadasd</h3>
-          <h4 class="text-lg md:text-x">mulai dari</h4>
-          <h3 class="text-xl md:text-2xl font-bold">Rp 29.9000.000</h3>
-        </div>
-      </div>
-      <!-- card 4 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 w-full overflow-hidden relative min-h-[300px] rounded-xl">
-        <div class="absolute inset-0">
-          <img class="h-full w-full object-cover object-right md:object-center"
-            src="./assets/images/package_umroh/41902efc-e68f-44dd-9383-51005d8dabdd.jpg">
-          <div class="absolute inset-0 bg-black opacity-60"></div>
-        </div>
-        <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
-          <h3 class="text-xl md:text-2xl font-bold">sdadasd</h3>
-          <h4 class="text-lg md:text-xl">sdadasd</h4>
-          <h3 class="text-xl md:text-2xl font-bold">sdadasd</h3>
-        </div>
-      </div>
 
+    <div class="flex flex-nowrap gap-4 items-center align-center justify-center">
+      @forelse ($categories as $category)
+      {{-- <a href="{!! route('category', $category->slug) !!}">
+        <div class="overflow-hidden relative rounded-full w-40 h-40 border-4">
+          <div class="absolute inset-0">
+            <div class="flex align-center items-center">
+              <img class="w-full h-full object-cover object-right md:object-center"
+                src="{!! Storage::url( $category->icon) !!}">
+              <div class="absolute inset-0 bg-black opacity-60"></div>
+            </div>
+          </div>
+          <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
+            <h3 class="text-xl md:text-2xl font-bold">{!! $category->name !!}</h3>
+          </div>
+        </div>
+      </a> --}}
+      <a href="{!! route('category', $category->slug) !!}">
+        <div>
+          <div class="w-[140px]">
+            <img class="w-full h-full rounded-xl" src="{!! Storage::url( $category->icon) !!}">
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-center">{!! $category->name !!}</h3>
+          </div>
+        </div>
+        {{-- <div class="overflow-hidden relative rounded-full w-40 h-40 border-4">
+          <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+          </div>
+          <div class="relative z-10 flex flex-col gap-y-2 justify-center items-center h-full">
+            <h3 class="text-xl md:text-2xl font-bold">{!! $category->name !!}</h3>
+          </div>
+        </div> --}}
+      </a>
+      @empty
+      <p class="text-sm md:text-base text-white text-center"> Data Belum Tersedia </p>
+      @endforelse
 
     </div>
   </section>
@@ -617,351 +531,242 @@
   <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
     <div class="flex flex-col justify-between items-center w-full gap-0 mb-[50px]">
       <!-- <h3 class="text-xl md:text-2xl text-primary">Umroh Musim 1445 H</h3> -->
-      <h2 class="text-2xl md:text-4xl font-bold text-secondary">Paket Umroh Terbaru</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-secondary">Paket Umroh Terbaru</h2>
     </div>
-    <!-- Card Product Group -->
-    <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-[20px] mb-[40px]">
-      <!-- card 1 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Sakinah
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="/public/pages/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
+    @forelse ($categories as $category)
+    @if ($category->id == 1)
+    <div id="swiper_product" class="swiper w-full pb-10">
+      <div class="swiper-wrapper">
+
+        @foreach (@$category->products as $product)
+
+        <div class="swiper-slide w-[300px] rounded-2xl overflow-hidden relative bg-primary">
+          {{-- <div
+            class="swiper-slide w-[300px] h-[250px] rounded-2xl overflow-hidden relative min-h-[760px] bg-primary"> --}}
+            <img src="{!! Storage::url( $product->photo ) !!}" class="w-full h-full" alt="tickety-assets">
+            <p class="px-[14px] py-2 rounded-xl bg-primary text-white font-semibold text-sm absolute top-5 right-5">
+              Promo
+            </p>
+            {{-- <div class="px-[14px] py-2 absolute top-[140px] right-5">
+              <a id="category" href="" title="Brosur">
+                <ion-icon name="help-circle-outline" class="text-3xl animate-bounce"
+                  src="{!!  Storage::url($product->brochure) !!}">
+                </ion-icon>
+              </a>
+            </div> --}}
+            <div class="w-full bg-primary flex flex-col h-full">
+              <div class="max-w-full pb-4">
+                <div class="flex flex-col gap-y-2 text-white">
+                  <div class="text-lg md:text-2xl font-bold text-center uppercase pt-2">
+                    {!! $product->title !!}
+                  </div>
+                  {{-- <div class="text-base md:text-sm font-bold text-center uppercase">
+                    {!! $product->name!!}
+                  </div> --}}
+                  <div class="text-base md:text-sm font-bold text-center bg-white rounded-xl text-primary mx-4 py-2">
+                    ({!! $product->start_priode->format('d-m-Y')!!} s.d. {!! $product->end_priode->format('d-m-Y')!!})
+                  </div>
+                  <!-- priode -->
+                  <div class="flex flex-col px-4 py-1">
+                    {{-- <div>
+                      <div class="flex flex-row items-center gap-1">
+                        <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
+                        <p class="text-sm md:text-base">{{ $product->start_priode->format('d-M-Y') }}</p>
+                      </div>
+                    </div> --}}
+                    <div class="flex flex-row align-center items-center justify-between">
+                      <div class="flex flex-col gap-y-2">
+                        <div class="flex flex-wrap gap-2">
+                          @forelse ($product->ProductTags as $ProductTag)
+                          <div class="bg-secondary px-2 py-1 rounded-md block">
+                            <p class="text-sm md:text-xs">#{!! $ProductTag->name !!}</p>
+                          </div>
+                          @empty
+
+                          @endforelse
+                        </div>
+                      </div>
+                      {{-- <div class="flex items-end justify-end">
+                        <img class="w-[50%]" src="{!! Storage::url( $product->category->icon) !!}" alt="" srcset="">
+                      </div> --}}
+                    </div>
+                  </div>
+                  <!-- hotel -->
+                  <div class="flex flex-col gap-y-4 px-4 py-2 border">
+                    {{-- <div class="flex items-center gap-4">
+                      <p class="text-sm md:text-xs px-[14px] py-1 rounded-lg bg-primary border">Hotel</p>
+                    </div> --}}
+                    <div class="flex items-center justify-between">
+                      <h3 class="text-base md:text-lg font-bold text-secondary">Hotel</h3>
+                      <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                    </div>
+                    @forelse ($product->ProductHoteles as $ProductHotel)
+                    <div class="flex flex-row gap-2 items-center align-center justify-between">
+                      {{-- <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon> --}}
+                      <p class="text-sm md:text-sm"> {!! $ProductHotel->hotel->name !!} </p>
+                      <div class="flex flex-row">
+                        @if ($ProductHotel->hotel->rating == 1)
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 2)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 3)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 4)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @elseif($ProductHotel->hotel->rating == 5)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        @endif
+                      </div>
+                    </div>
+                    @empty
+                    <p class="text-sm md:text-base text-primary"> Data Belum Tersedia </p>
+                    @endforelse
+                  </div>
+                  <!-- maskapai -->
+                  <div class="flex flex-row justify-between items-center align-center px-4 py-2">
+                    <div class="flex flex-row w-full max-w-24 order-1">
+                      @forelse ($product->ProductAirlines as $ProductAirline)
+                      <img class="w-full bg-white rounded-xl"
+                        src="{!! Storage::url( $ProductAirline->airline->icon ) !!}" alt="">
+                      @empty
+                      <p class="text-sm md:text-base text-primary">
+                        Data Belum Tersedia
+                      </p>
+                      @endforelse
+                    </div>
+                    <div class="flex flex-col gap-2 order-2">
+                      <p class="text-sm md:text-xs">Harga Mulai</p>
+                      <h3 class="text-3xl md:text-2xl font-bold text-secondary">
+                        {!! $product->price_start_from !!} Juta
+                      </h3>
+                    </div>
+
+                  </div>
+                  {{-- <div class="grid grid-cols-2 p-4 items-center">
+                    <div class="flex items-center gap-4">
+                      <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
+                      <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
+                    </div>
+                    <div class="">
+                      <div class="flex flex-col gap-2">
+                        @forelse ($product->ProductAirlines as $ProductAirline)
+                        <img class="w-[80%] bg-white rounded-xl"
+                          src="{!! Storage::url( $ProductAirline->airline->icon ) !!}" alt="">
+                        @empty
+                        <p class="text-sm md:text-base text-primary">
+                          Data Belum Tersedia
+                        </p>
+                        @endforelse
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <div class="flex flex-col gap-2 items-end">
+                        <p class="text-sm md:text-xs">Harga Mulai</p>
+                        <h3 class="text-3xl md:text-2xl font-bold text-secondary">
+                          {!! $product->price_start_from !!} Juta
+                        </h3>
+                      </div>
+                    </div>
+                  </div> --}}
+                  <div>
+                    @if ($product->seat_available == 1)
+                    <div class="mt-auto px-4 py-1">
+                      <a href="{{ route('product.details', [$category->slug, $product->slug]) }}"
+                        class="block btn-orange">
+                        <div class="flex flex-row gap-2 items-center justify-center align-center">
+                          <ion-icon name="alert-circle-outline" class="text-white"></ion-icon>
+                          Terbatas
+                        </div>
+                      </a>
+                    </div>
+                    @elseif($product->seat_available >= 1)
+                    <div class="mt-auto px-4 py-1">
+                      <a href="{{ route('product.details', [$category->slug, $product->slug]) }}"
+                        class="block btn-secondary">
+                        <div class="flex flex-row gap-2 items-center justify-center align-center">
+                          <ion-icon name="checkmark-circle" class="text-white"></ion-icon>
+                          {!! $product->seat_available !!}
+                          Tersisa
+                        </div>
+                      </a>
+                    </div>
+                    @else
+                    <div class="mt-auto px-4 py-1">
+                      <a href="#" class="block btn-red">
+                        <div class="flex flex-row gap-2 items-center justify-center align-center">
+                          <ion-icon name="close-circle-outline" class="text-white"></ion-icon>
+                          Full Booked
+                        </div>
+                      </a>
+                    </div>
+                    @endif
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <!-- </div> -->
-        </div>
-      </div>
-      <!-- card 2 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Mawadah
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="/public/pages/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- </div> -->
-        </div>
-      </div>
-      <!-- card 3 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/pQbM1OuaB5lOO4aKGB50.jpeg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Mawdah 2
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
+          @endforeach
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="/public/pages/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- </div> -->
         </div>
       </div>
-      <!-- card 4 -->
-      <div
-        class="group lg:col-span-3 md:col-span-2 col-span-12 rounded-2xl w-full overflow-hidden relative min-h-[650px] bg-primary">
-        <img src="./assets/images/product/3137586-138452035.jpg" class="w-full h-full max-h-[150px]"
-          alt="tickety-assets">
-        <div class="p-5 w-full bg-primary flex flex-col h-full">
-          <!-- <div class="flex flex-wrap flex-col items-center justify-between gap-y-"> -->
-          <div class="max-w-[290px]">
-            <div class="flex flex-col gap-y-4 text-white">
-              <div class="text-base font-bold text-center uppercase">
-                Paket Sakinah 2
-              </div>
-              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-              <!-- priode -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="calendar-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Priode</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-1">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Okt 2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- hotel -->
-              <div class="flex flex-col gap-y-4">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="bed-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Hotel</h3>
-                </div>
-                <div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                  <div class="flex flex-row items-center gap-2">
-                    <ion-icon name="checkmark-circle" class="text-secondary"></ion-icon>
-                    <p class="text-sm md:text-base">Mekkah : Pullman Zamzam</p>
-                  </div>
-                </div>
-              </div>
-              <!-- maskapai -->
-              <div class="flex flex-col gap-y-6">
-                <div class="flex items-center gap-4">
-                  <ion-icon name="airplane-outline" class="text-2xl bg-secondary block rounded-2xl p-1"></ion-icon>
-                  <h3 class="text-sm md:text-base font-bold">Maskapai</h3>
-                </div>
-                <div class="flex flex-row gap-2 ">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                  <img class="w-2/4" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
-                </div>
-              </div>
+      <div class="flex flex-col justify-between items-center">
+        <a class="block btn-primary" href="{!! route('category', $category->slug) !!}">Paket Umroh Terbaru Lainnya</a>
+      </div>
+      @endif
 
-              <h3 class="text-lg md:text-xl font-bold text-secondary text-center">
-                Rp. 39.500.000,00
-              </h3>
-              <div class="mt-auto">
-                <a href="/public/pages/details.html" class="block btn-secondary">
-                  Detail Jadwal
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- </div> -->
-        </div>
-      </div>
-    </div>
-    <!-- End Card Product Group -->
-    <div class="flex flex-col justify-between items-center">
-      <a class="block btn-primary" href="http://">Paket Umroh Lainnya</a>
-    </div>
+      @empty
+      <p class="text-sm md:text-base text-primary text-center"> Data Belum Tersedia </p>
+      @endforelse
+
   </section>
 
-  <!-- Section Our Brosur -->
+  <!-- Section Brosur -->
   <section class="container relative max-w-screen-xl py-10">
     <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
-      <!-- <h3 class="text-xl md:text-2xl font-semibold text-white">Brosur Terbaru Update</h3> -->
-      <h2 class="text-2xl md:text-4xl font-bold text-secondary">Brosur Terbaru Update</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-secondary">Brosur Terbaru Update</h2>
     </div>
-
-    <div id="new-browsur">
-      <a href="http://">
-        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/02.jpg" alt="">
-      </a>
-      <a href="http://">
-        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/04-1.jpg" alt="">
-      </a>
-      <a href="http://">
-        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/04-1.jpg" alt="">
-      </a>
-      <a href="http://">
-        <img class="w-fit h-[600px] rounded-lg mr-[30px]" src="./assets/images/browsur/04-1.jpg" alt="">
-      </a>
+    <div id="swiper_brochure" class="swiper w-full">
+      <div class="swiper-wrapper" id="swiper_brochure_lg-swipper">
+        <a data-src="#" class="swiper-slide">
+          <img class="w-full rounded-lg" src="./assets/images/browsur/02.jpg" alt="{!! $brochure->name !!}">
+        </a>
+        <a data-src="#" class="swiper-slide">
+          <img class="w-full rounded-lg" src="./assets/images/browsur/02.jpg" alt="{!! $brochure->name !!}">
+        </a>
+      </div>
     </div>
-
   </section>
-  <img src="./assets/images/wavy-line-1.svg" class="absolute -z-10 md:top-[100rem] w-full" alt="tickety-assets">
-  <!-- Section Our Services -->
+
+  <!-- Section Services -->
   <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
     <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
       <h3 class="text-xl md:text-2xl font-semibold text-white">Layanan Kami</h3>
-      <h2 class="text-2xl md:text-4xl font-bold text-primary">Kenapa Harus Kami</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-primary">Kenapa Harus Kami</h2>
     </div>
     <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 lg:gap-[120px] items-center">
-      <img class="w-full md:max-w-[536px]"
-        src="./assets/images/service/cropped-1200px-Garuda_Indonesia_Boeing_737-800_PK-GMM_HKG_2012-7-18-780x405.png"
-        alt="">
+      <img class="w-full md:max-w-[536px]" src="./assets/images/logo-alia-wisata.png" alt="">
       <div class="max-w-[420px] w-full">
         <header>
-          <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Extra Layanan</h3>
-          <p class="text-sm md:text-base text-primary mb-1">Anda adalah prioritas kami!</p>
+          <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Poin Plus.</h3>
+          <p class="text-sm md:text-base text-primary mb-1">Rasakan pengalaman ibadah umroh yang aman dan nyaman bersama
+            Alia Wisata.</p>
         </header>
         <!-- Service Item -->
-        <div class="flex items-center gap-6">
-          <img class="w-[60px]" src="./assets/images/service/customer-service.png" alt="">
+        <div class="flex items-center gap-6 py-3 bg-gradient-to-tr from-emerald-500 rounded-lg p-2 mb-2">
+          <img class="w-[60px]" src="{!! asset('/assets/frontend/images/man.png') !!}" alt="">
           <div>
             <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Support</h3>
             <p class="text-sm md:text-base text-primary mb-1">Guna memberikan pelayanan terbaik, Alia Wisata bekerja
@@ -972,8 +777,8 @@
               baik maskapai penerbangan, hotel, maupun pemerintah</p>
           </div>
         </div>
-        <div class="flex items-center gap-6">
-          <img class="w-[60px]" src="./assets/images/service/achievement.png" alt="">
+        <div class="flex items-center gap-6 py-3 bg-gradient-to-tr from-emerald-500 rounded-lg p-2 mb-2">
+          <img class="w-[60px]" src="{!! asset('/assets/frontend/images/tawaf.png') !!}" alt="">
           <div>
             <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Quality</h3>
             <p class="text-sm md:text-base text-primary mb-1">Produk jasa Alia Wisata dirancang dan dikemas oleh
@@ -985,8 +790,8 @@
               kualitas dan layanannya</p>
           </div>
         </div>
-        <div class="flex items-center gap-6">
-          <img class="w-[60px]" src="./assets/images/service/response.png" alt="">
+        <div class="flex items-center gap-6 py-3 bg-gradient-to-tr from-emerald-500 rounded-lg p-2 mb-2">
+          <img class="w-[60px]" src="{!! asset('/assets/frontend/images/umrah.png') !!}" alt="">
           <div>
             <h3 class="text-xl md:text-2xl font-bold text-primary mb-1">Responsive</h3>
             <p class="text-sm md:text-base text-primary mb-1">Alia Wisata sebagai travel umrah haji berkomitmen pada
@@ -1004,222 +809,236 @@
 
   </section>
 
-  <!-- Section Galery -->
-  <section class="container relative max-w-screen-xl py-10">
-    <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
-      <h2 class="text-2xl md:text-4xl font-bold text-white">Galei Foto</h2>
-      <h3 class="text-xl md:text-2xl text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
-        Dibawah ini adalah dokumentasi foto-foto keberangkantan umroh Alia Wisata bersama dengan para jamaah.
-      </h3>
-    </div>
-    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      <a href="./assets/images/gallery/Bahrah-Tour-2.webp" data-lg-size="1600-2400">
-        <img class="h-[300px] max-w-full rounded-lg" alt="img1" src="./assets/images/gallery/Bahrah-Tour-2.webp" />
-      </a>
-      <a href="./assets/images/gallery/Bahrah-Tour-3.webp" data-lg-size="1600-2400">
-        <img class="h-[300px] max-w-full rounded-lg" alt="img1" src="./assets/images/gallery/Bahrah-Tour-3.webp" />
-      </a>
-      <a href="./assets/images/gallery/Bahrah-Tour-4-1.webp" data-lg-size="1600-2400">
-        <img class="h-[300px] max-w-full rounded-lg" alt="img1" src="./assets/images/gallery/Bahrah-Tour-4-1.webp" />
-      </a>
-
-    </div>
-
-  </section>
-
   <!-- Section Testimonial -->
   <section class="container relative max-w-screen-xl py-10">
-    <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
-      <h2 class="text-2xl md:text-4xl font-bold text-white">Testimoni Para Jamaah</h2>
-      <!-- <h3 class="text-xl md:text-2xl text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
-        Dibawah ini adalah dokumentasi foto-foto keberangkantan umroh Alia Wisata bersama dengan para jamaah.
-      </h3> -->
+    <div class="flex flex-col justify-between w-full gap-1 mb-[50px]">
+      <h2 class="text-2xl md:text-3xl font-bold text-white">Testimoni Jamaah.</h2>
+      <p class="text-base md:text-lg text-white">Dapatkan promo potongan harga menarik untuk perjalanan ibadh umroh
+        sahabat semua.</p>
     </div>
-    <div id="testimonial">
-      <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-4">
-        <div class="lg:col-span-4 col-span-12">
-          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
-            <div class="flex flex-row gap-4 items-center text-primary">
-              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
-              <div class="flex flex-col">
-                <h4 class="text-base md:text-lg font-bold">Tri Prastia</h4>
-                <p>Jamaah</p>
+
+    <div id="swiper_testimonial" class="swiper w-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="lg:col-span-4 col-span-12">
+            <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+              <div class="flex flex-row gap-4 items-center text-primary">
+                <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+                <div class="flex flex-col">
+                  <h4 class="text-base md:text-lg font-bold">Tri Prastia</h4>
+                  <p>Jamaah</p>
+                </div>
               </div>
-            </div>
-            <p class="text-sm md:text-base text-primary">alhamdilullah perjalan umroh berjalan lancar dan dipandung
-              dengan baik oleh Alia
-              Wisata, semoga bisa kembali lagi
-              umroh bersama Alia Wisata
-            </p>
-            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
+              <p class="text-sm md:text-base text-primary">alhamdilullah perjalan umroh berjalan lancar dan dipandung
+                dengan baik oleh Alia
+                Wisata, semoga bisa kembali lagi
+                umroh bersama Alia Wisata
+              </p>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
             </div>
           </div>
         </div>
-        <div class="lg:col-span-4 col-span-12">
-          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
-            <div class="flex flex-row gap-4 items-center text-primary">
-              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
-              <div class="flex flex-col">
-                <h4 class="text-base md:text-lg font-bold">Yuni Asri</h4>
-                <p>Jamaah</p>
+        <div class="swiper-slide">
+          <div class="lg:col-span-4 col-span-12">
+            <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+              <div class="flex flex-row gap-4 items-center text-primary">
+                <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+                <div class="flex flex-col">
+                  <h4 class="text-base md:text-lg font-bold">Yuni Asri</h4>
+                  <p>Jamaah</p>
+                </div>
               </div>
-            </div>
-            <p class="text-sm md:text-base text-primary">Puji Syukur kepada Allah akhirnya saya bisa melaksanakan ibadah
-              umroh, dan
-              terimakasih buat Alia Wisata yang telah
-              memberikan pelayanan terbaik hingga pulang ke tanah air
-            </p>
-            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
+              <p class="text-sm md:text-base text-primary">Puji Syukur kepada Allah akhirnya saya bisa melaksanakan
+                ibadah
+                umroh, dan
+                terimakasih buat Alia Wisata yang telah
+                memberikan pelayanan terbaik hingga pulang ke tanah air
+              </p>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
             </div>
           </div>
         </div>
-        <div class="lg:col-span-4 col-span-12">
-          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
-            <div class="flex flex-row gap-4 items-center text-primary">
-              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
-              <div class="flex flex-col">
-                <h4 class="text-base md:text-lg font-bold">Indah</h4>
-                <p>Jamaah</p>
+        <div class="swiper-slide">
+          <div class="lg:col-span-4 col-span-12">
+            <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+              <div class="flex flex-row gap-4 items-center text-primary">
+                <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+                <div class="flex flex-col">
+                  <h4 class="text-base md:text-lg font-bold">Yuni Asri</h4>
+                  <p>Jamaah</p>
+                </div>
+              </div>
+              <p class="text-sm md:text-base text-primary">Puji Syukur kepada Allah akhirnya saya bisa melaksanakan
+                ibadah
+                umroh, dan
+                terimakasih buat Alia Wisata yang telah
+                memberikan pelayanan terbaik hingga pulang ke tanah air
+              </p>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
               </div>
             </div>
-            <p class="text-sm md:text-base text-primary">Pelayanan bagus, keberangkatan tepat waktu, hotelnya keren,
-              makanannya juga keren, insyaalah jika umroh lagi akan
-              bersama Alia Wisata lagi
-            </p>
-            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="lg:col-span-4 col-span-12">
+            <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
+              <div class="flex flex-row gap-4 items-center text-primary">
+                <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
+                <div class="flex flex-col">
+                  <h4 class="text-base md:text-lg font-bold">Yuni Asri</h4>
+                  <p>Jamaah</p>
+                </div>
+              </div>
+              <p class="text-sm md:text-base text-primary">Puji Syukur kepada Allah akhirnya saya bisa melaksanakan
+                ibadah
+                umroh, dan
+                terimakasih buat Alia Wisata yang telah
+                memberikan pelayanan terbaik hingga pulang ke tanah air
+              </p>
+              <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="grid lg:grid-cols-12 md:grid-cols-4 grid-cols-1 gap-4">
-        <div class="lg:col-span-4 col-span-12">
-          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
-            <div class="flex flex-row gap-4 items-center text-primary">
-              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
-              <div class="flex flex-col">
-                <h4 class="text-base md:text-lg font-bold">Tri Prastia</h4>
-                <p>Jamaah</p>
-              </div>
-            </div>
-            <p class="text-sm md:text-base text-primary">alhamdilullah perjalan umroh berjalan lancar dan dipandung
-              dengan baik oleh Alia
-              Wisata, semoga bisa kembali lagi
-              umroh bersama Alia Wisata
-            </p>
-            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-4 col-span-12">
-          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
-            <div class="flex flex-row gap-4 items-center text-primary">
-              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
-              <div class="flex flex-col">
-                <h4 class="text-base md:text-lg font-bold">Yuni Asri</h4>
-                <p>Jamaah</p>
-              </div>
-            </div>
-            <p class="text-sm md:text-base text-primary">Puji Syukur kepada Allah akhirnya saya bisa melaksanakan ibadah
-              umroh, dan
-              terimakasih buat Alia Wisata yang telah
-              memberikan pelayanan terbaik hingga pulang ke tanah air
-            </p>
-            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-4 col-span-12">
-          <div class="flex flex-col gap-4 bg-white p-5 rounded-lg">
-            <div class="flex flex-row gap-4 items-center text-primary">
-              <img class="h-12" src="./assets/images/testimonial/tria_member.png" alt="">
-              <div class="flex flex-col">
-                <h4 class="text-base md:text-lg font-bold">Indah</h4>
-                <p>Jamaah</p>
-              </div>
-            </div>
-            <p class="text-sm md:text-base text-primary">Pelayanan bagus, keberangkatan tepat waktu, hotelnya keren,
-              makanannya juga keren, insyaalah jika umroh lagi akan
-              bersama Alia Wisata lagi
-            </p>
-            <div class="flex flex-row gap-x-1 text-secondary items-center justify-center text-xl">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
-  <!-- Section Mitra -->
-  <section class="container relative max-w-screen-xl py-10">
-    <div class="flex flex-col justify-between items-center w-full gap-1 mb-[50px]">
-      <h2 class="text-2xl md:text-4xl font-bold text-white">Mitra Pendukung Kami</h2>
-      <!-- <h3 class="text-xl md:text-2xl text-white text-center">Kami memiliki paket-paket umroh yang dapat anda
-          Dibawah ini adalah dokumentasi foto-foto keberangkantan umroh Alia Wisata bersama dengan para jamaah.
-        </h3> -->
+  <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
+    <div class="flex flex-col justify-between w-full gap-0 mb-[50px]">
+      <h2 class="text-2xl md:text-3xl font-bold text-secondary">Klaim Voucher</h2>
+      <p class="text-base md:text-lg text-primary">Dapatkan promo potongan harga menarik untuk perjalanan ibadah umroh
+        sahabat semua.</p>
     </div>
-    <div id="mitraCarousel">
-      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-citilink-abt.webp"
-        alt="tickety-assets">
-      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-elaf-hotel-abt.webp"
-        alt="tickety-assets">
-      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-emirates-abt.webp"
-        alt="tickety-assets">
-      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-etihad-abt.webp"
-        alt="tickety-assets">
-      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-garuda-indonesia-abt.webp"
-        alt="tickety-assets">
-      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]" src="./assets/images/mitra/logo-hotel-fajr-badie-icon.webp"
-        alt="tickety-assets">
-      <img class="w-[150px] h-[120px] rounded-2xl mr-[30px]"
-        src="./assets/images/mitra/logo-hotel-le-meridien-mekah.webp" alt="tickety-assets">
+    <div id="swiper_promo" class="swiper w-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="w-[550px] h-[200px] rounded-2xl" src="./assets/images/browsur/02.jpg" alt="">
+        </div>
+      </div>
     </div>
-    <!-- <div id="galleryCarousel">
-      <img src="./assets/images/logo-alia-wisata.png" class="w-[433px] h-[310px] rounded-2xl mr-[30px]"
-        alt="tickety-assets">
-      <img src="./assets/images/logo-alia-wisata.png" class="w-[433px] h-[310px] rounded-2xl mr-[30px]"
-        alt="tickety-assets">
-      <img src="./assets/images/logo-alia-wisata.png" class="w-[433px] h-[310px] rounded-2xl mr-[30px]"
-        alt="tickety-assets">
-      <img src="./assets/images/logo-alia-wisata.png" class="w-[433px] h-[310px] rounded-2xl mr-[30px]"
-        alt="tickety-assets">
-    </div> -->
-    <!-- Prev Button -->
-    <!-- <div class="absolute hidden -translate-y-1/2 top-1/2 right-4 lg:right-[200px] cursor-pointer"
-      id="carouselRightButton">
-      <img src="/public/assets/svgs/ic-right-rounded.svg" alt="tickety-assets">
-    </div> -->
-    <!-- Next Button -->
-    <!-- <div class="absolute -translate-y-1/2 cursor-pointer top-1/2 lg:left-20" id="carouselLeftButton">
-      <img src="/public/assets/svgs/ic-left-rounded.svg" alt="tickety-assets">
-    </div> -->
+  </section>
 
+  <!-- Section News -->
+  <section class="container relative max-w-screen-xl py-10 bg-white rounded-md">
+    <div class="flex flex-col justify-between w-full gap-0 mb-[50px]">
+      <h2 class="text-2xl md:text-3xl font-bold text-secondary">News.</h2>
+      <p class="text-base md:text-lg text-primary">Dapatkan berita menarik untuk perjalanan ibadah umroh sahabat semua.
+      </p>
+    </div>
+
+    <div id="swiper_testimonial" class="swiper w-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="https://amphuri.org/kementerian-haji-dan-umrah-dibutuhkan-umat/" target="_blank">
+            <div class="lg:col-span-4 col-span-12">
+              <div class="flex flex-col gap-4 bg-primary p-5 rounded-lg">
+                <div class="flex flex-row gap-4 items-center text-white">
+                  <img class="h-20" src="https://amphuri.org/wp-content/uploads/2024/10/Dr-ulul-albab-1024x573.jpg"
+                    alt="">
+                  <div class="flex flex-col">
+                    <h4 class="text-base font-bold">AMPHURI Usul Prabowo Bentuk Kementerian Haji dan Umrah</h4>
+                  </div>
+                </div>
+                <p class="text-sm md:text-base text-white">
+                  AMPHURI.ORG, JAKARTA–Dewan Pengurus Pusat Asosiasi Muslim Penyelenggara Haji dan Umrah
+                  Republik Indonesia (DPP AMPHURI) menilai penyelenggaraan haji dan umrah sangatlah kompleks, diperlukan
+                  koordinasi dan pengelolaan yang lebih fokus. Karena itu, AMPHURI mendesak Pemerintahan baru di bawah
+                  kepemimpinan Prabowo Subianto agar membentuk Kementerian Haji dan Umrah.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://amphuri.org/amphuri-usul-prabowo-bentuk-kementerian-haji-dan-umrah/" target="_blank">
+            <div class="lg:col-span-4 col-span-12">
+              <div class="flex flex-col gap-4 bg-primary p-5 rounded-lg">
+                <div class="flex flex-row gap-4 items-center text-white">
+                  <img class="h-20" src="https://amphuri.org/wp-content/uploads/2024/10/Sekjen-Zaky-a.jpg" alt="">
+                  <div class="flex flex-col">
+                    <h4 class="text-base font-bold">Kementerian Haji dan Umrah Dibutuhkan Umat</h4>
+                  </div>
+                </div>
+                <p class="text-sm md:text-base text-white">
+                  Kementerian Haji dan Umrah di Indonesia harus direalisasikan. Alasan yang paling mendesak
+                  adalah tentang “konteks”, yaitu berkaitan dengan kompleksitas pengelolaan serta jumlah jamaah yang
+                  terus
+                  bertambah dan tidak mungkin dihentikan. Pengelolaan haji dan umrah sangat kompleks, melibatkan pihak
+                  pemerintah, swasta, dan lainnya. Di pihak pemerintah, ada Kementerian Agama yang bertanggung jawab
+                  menyusun kebijakan, pelaksanaan teknis, pelayanan, bimbingan, serta pengelolaan sistem informasi
+                  terkait
+                  haji dan umrah.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://amphuri.org/menag-yaqut-temui-menhaj-tawfiq-bahas-persiapan-haji-2025/" target="_blank">
+            <div class="lg:col-span-4 col-span-12">
+              <div class="flex flex-col gap-4 bg-primary p-5 rounded-lg">
+                <div class="flex flex-row gap-4 items-center text-white">
+                  <img class="h-20" src="https://amphuri.org/wp-content/uploads/2024/09/Menag-Menhaj-2024-1024x550.jpg"
+                    alt="">
+                  <div class="flex flex-col">
+                    <h4 class="text-base font-bold">Menag Yaqut Temui Menhaj Tawfiq, Bahas Persiapan Haji 2025</h4>
+                  </div>
+                </div>
+                <p class="text-sm md:text-base text-white">
+                  AMPHURI.ORG, JEDDAH–Menteri Agama Yaqut Cholil Qoumas bertemu dengan Menteri Haji dan
+                  Umrah
+                  Arab Saudi Tawfiq F Al Rabiah di kantor Kementerian Haji dan Umrah, Jeddah. Dalam pertemuan tersebut,
+                  Menag yang didampingi Dirjen Penyelenggaraan Haji dan Umrah Hilman Latief dan Konsul Haji KJRI Jeddah
+                  Nasrullah Jasam, sengaja menemui Menhaj Tawfiq untuk membahas persiapan penyelenggaraan ibadah haji
+                  1446
+                  H/2025 M.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Section Maskapai -->
+  <section class="container relative max-w-screen-xl py-10">
+    <div class="flex flex-col justify-between w-full gap-1 mb-[50px]">
+      <h2 class="text-2xl md:text-3xl font-bold text-white">Partner Maskapai.</h2>
+      <p class="text-base md:text-lg text-white">Dapatkan promo potongan harga menarik untuk perjalanan ibadah umroh
+        sahabat semua.</p>
+    </div>
+    <div id="swiper_maskapai" class="swiper w-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="rounded-2xl bg-white" src="./assets/images/maskapai/garuda-indonesia-300x84.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="rounded-2xl bg-white" src="./assets/images/maskapai/saudia-300x84.png" alt="">
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Section Map -->
@@ -1229,6 +1048,8 @@
       style="border:0;" allowfullscreen="" frameborder="0" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
+
+
 
   <!-- Footer -->
   <footer class="bg-white relative mx-auto">
@@ -1310,157 +1131,15 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JS  -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer="defer"></script>
+  <script src="./js/script.js" type="module"></script>
 
-  <!-- Carousel -->
-  <script>
-    // var elem = document.querySelector('#galleryCarousel');
-    // var flkty = new Flickity(elem, {
-    //   // options
-    //   cellAlign: 'left',
-    //   contain: true
-    // });
-
-    $(() => {
-      $('#navbarToggler').on('click', function (e) {
-        let navigationMenu = $(this).attr('data-target')
-        $(navigationMenu).toggleClass('hidden')
-      })
-    })
-
-
-    // element argument can be a selector string
-    //   for an individual element
-    var flkty = new Flickity('#mitraCarousel', {
-      cellAlign: 'center',
-      imagesLoaded: true,
-      contain: true,
-      prevNextButtons: true,
-      autoPlay: true,
-      wrapAround: true,
-      draggable: true,
-      adaptiveHeight: true,
-      pageDots: false,
-      groupCells: false,
-    });
-
-    var flkty = new Flickity('#slider', {
-      cellAlign: 'left',
-      imagesLoaded: true,
-      contain: true,
-      prevNextButtons: true,
-      autoPlay: true,
-      wrapAround: true,
-      draggable: true,
-      adaptiveHeight: true,
-      pageDots: false,
-      groupCells: false,
-    });
-
-    var flkty = new Flickity('#new-browsur', {
-      cellAlign: 'left',
-      imagesLoaded: true,
-      contain: true,
-      prevNextButtons: true,
-      autoPlay: true,
-      wrapAround: true,
-      draggable: true,
-      adaptiveHeight: true,
-      pageDots: false,
-      groupCells: false,
-    });
-
-    var flkty = new Flickity('#testimonial', {
-      cellAlign: 'left',
-      imagesLoaded: true,
-      contain: true,
-      prevNextButtons: true,
-      autoPlay: 5000,
-      wrapAround: true,
-      draggable: true,
-      adaptiveHeight: true,
-      pageDots: false,
-      groupCells: false,
-    });
-
-
-    // lightGallery(document.getElementById('#lightgallery'), {
-    //   plugins: [lgZoom, lgThumbnail],
-    //   //licenseKey: 'your_license_key',
-    //   speed: 500,
-    //   // ... other settings
-    // });
-
-    // const container = document.getElementById("#lightgallery");
-    // lightGallery(container, {
-    //   speed: 500,
-    //   plugins: []
-    // });
-
-
-    lightGallery(document.getElementById("lightgallery"), {
-      thumbnail: true,
-      // animateThumb: false,
-      // zoomFromOriginal: false,
-      // allowMediaOverlap: true,
-      // toggleThumb: true,
-    });
-
-    const player = new Plyr(document.getElementById('player'));
-
-    // $carousel = $('#galleryCarousel')
-    // let flickityPrevButton = $('#galleryCarousel .flickity-prev-next-button.previous')
-    // let flickityNextButton = $('#galleryCarousel .flickity-prev-next-button.next')
-    // let rightButton = $('#carouselRightButton')
-    // let leftButton = $('#carouselLeftButton')
-    // let flktyPrevNextButtons = $(window).width() > 991 ? true : false
-
-    // $carousel.flickity({
-    //   cellAlign: 'center',
-    //   contain: true,
-    //   pageDots: false,
-    //   imagesLoaded: true,
-    //   groupCells: false,
-    //   prevNextButtons: false
-    // })
-
-    // if ($(window).width() > 991) {
-    //   $('#galleryCarousel .flickity-viewport').css({
-    //     overflow: 'visible'
-    //   })
-    // }
-
-    // $carousel.on('change.flickity', function (event, index) {
-    //   let len = $('#galleryCarousel .flickity-slider').children().length
-    //   // console.log(len, index)
-
-    //   if (index === len - 1) {
-    //     leftButton.addClass('hidden')
-    //   }
-
-    //   if (index > 0) {
-    //     rightButton.removeClass('hidden')
-    //   } else {
-    //     rightButton.addClass('hidden')
-    //     leftButton.removeClass('hidden')
-    //   }
-    // });
-
-    // leftButton.on('click', function (e) {
-    //   $carousel.flickity('next')
-    // })
-
-    // rightButton.on('click', function (e) {
-    //   $carousel.flickity('previous')
-    // })
-  </script>
 </body>
 
 </html>
